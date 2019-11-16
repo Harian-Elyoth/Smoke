@@ -1,7 +1,7 @@
 CC=g++
 CCFLAGS= -Wall -Werror -std=c++11 -g
 LIBFLAGS= 
-SRC= $(wildcard *.cc)
+SRC= $(wildcard src/*.cc)
 OBJ= $(SRC:.cc=.o)
 TST= $(wildcard unitTest/*.cc)
 OBJ_TEST = $(filter-out logic.o, $(OBJ)) $(TST:.cc=.o)
