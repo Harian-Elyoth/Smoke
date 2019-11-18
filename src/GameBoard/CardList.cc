@@ -1,4 +1,4 @@
-#include "CardList.hh"
+#include "CardList.h"
 #include <list>
 
 CardList::CardList(list <Card*> list):l(list){}
