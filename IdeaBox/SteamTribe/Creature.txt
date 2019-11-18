@@ -1,0 +1,45 @@
+Cost 0 :
+
+    Steam Gear :
+        Stat : 1/1
+        Effect : When summoned Generate 2 Smoke, 5 if Steam core is on the board.
+    
+    Steam Light :
+        Stat : 0/2
+        Effect : When Steam Light die, Generate 2 Smoke, 5 If Steam Core is on the board.
+    
+    Steam worker :
+        Stat : 2/1
+        Effect : When summoned Draw one Steam Core, from your deck to your hand
+
+Cost 1 :
+
+    Steam Mecha Warrior :
+        Stat : 2/2
+        Effect : The Steam Mecha Warrior has +1/+0 if the Steam Core is on the battlefield
+    
+    Steam Cat :
+        Stat : 1/1
+        Effect : When the Steam Cat enter into the battlefield, draw a card. When the Steam Cat dies, 
+        summon a two or less cost card from your deck to your hand.
+
+    Steam Automaton :
+        Stat : 1/2
+        Effect : When the Automaton enter into the battlefield, reduce by two the cost of the next Steam 
+        card you play.
+
+Cost 2 :
+
+    Steam Boiling Defender :
+        Stat : 1/4
+        Effect : You can use 5 Smoke to switch the strength and the health of this card, if you do that 
+        The Steam Defender gain invincible until the end of the turn.
+    
+Cost 5 :
+
+    Steam Locomotive :
+    Stat : 3/3
+    Effect : 
+
+        
+    
