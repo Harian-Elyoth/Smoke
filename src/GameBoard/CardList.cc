@@ -1,3 +1,4 @@
+
 #include "CardList.h"
 #include <list>
 
@@ -7,4 +8,5 @@ Card* CardList::draw(){
     Card *c = *l.begin();
     l.pop_front();
     return c;
+
 }
