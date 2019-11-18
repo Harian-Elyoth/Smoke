@@ -2,10 +2,9 @@
 #ifndef FIELD_H
 #define FIELD_H
 #include "Card.h"
-#include "Card.h"
 
 #include <string>
-class Field : virtual public Card, virtual public Card
+class Field : virtual public Card
 {
 public:
 
