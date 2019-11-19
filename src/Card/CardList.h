@@ -1,108 +1,131 @@
 
 #ifndef CARDLIST_H
 #define CARDLIST_H
+#include "Card.h"
 
 #include <string>
 #include <vector>
 
+using namespace std;
+
+/**
+  * class CardList
+  * 
+  */
 
 class CardList
 {
 public:
+  // Constructors/Destructors
+  //  
 
-		// Constructors/Destructors
-		//  
+  CardList(vector<Card*> cL):cList(cL){}
 
+  /**
+   * Empty Constructor
+   */
+  CardList();
 
-		/**
-		 * Empty Constructor
-		 */
-		CardList ();
+  /**
+   * Empty Destructor
+   */
+  virtual ~CardList();
 
-		/**
-		 * Empty Destructor
-		 */
-		virtual ~CardList ();
+  // Static Public attributes
+  //  
 
-
-
-		/**
-		 */
-		void shuffle ()
-		{
-		}
+  // Public attributes
+  //  
 
 
-		/**
-		 * @param  c
-		 */
-		void add (undef c)
-		{
-		}
+  // Public attribute accessor methods
+  //  
 
 
-		/**
-		 * @param  cList
-		 */
-		void add (list <Card*> cList)
-		{
-		}
+  // Public attribute accessor methods
+  //  
 
 
-		/**
-		 * @return Card*
-		 */
-		Card* draw ()
-		{
-		}
+
+  /**
+   * @param  card
+   */
+  void add(Card* card)
+  {
+  }
+
+
+  /**
+   * @param  cList
+   */
+  void add(vector<Card*> cL)
+  {
+  }
+
+
+  /**
+   */
+  virtual void show() = 0;
+
+
+  /**
+   * @param  card
+   */
+  void play(Card* card)
+  {
+  }
 
 protected:
+  // Static Protected attributes
+  //  
 
-public:
-
-protected:
-
-public:
-
-protected:
+  // Protected attributes
+  //  
 
 
-private:
+  // Protected attribute accessor methods
+  //  
 
-		// Private attributes
-		//  
 
-		int length;
-public:
+  // Protected attribute accessor methods
+  //
 
 private:
+  // Static Private attributes
+  //  
 
-public:
+  // Private attributes
+  //  
 
+  vector<Card*> cList;
 
-		// Private attribute accessor methods
-		//  
-
-
-		/**
-		 * Set the value of length
-		 * @param new_var the new value of length
-		 */
-		void setLength (int new_var)		 {
-						length = new_var;
-		}
-
-		/**
-		 * Get the value of length
-		 * @return the value of length
-		 */
-		int getLength ()		 {
-				return length;
-		}
-private:
+  // Private attribute accessor methods
+  //  
 
 
-		void initAttributes () ;
+  // Private attribute accessor methods
+  //  
+
+
+  /**
+   * Set the value of cList
+   * @param new_var the new value of cList
+   */
+  void setCList(vector<Card*> new_var)
+  {
+    cList = new_var;
+  }
+
+  /**
+   * Get the value of cList
+   * @return the value of cList
+   */
+  vector<Card*> getCList()
+  {
+    return cList;
+  }
+
+  void initAttributes();
 
 };
 
