@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <XMI verified="false" xmi.version="1.2" timestamp="2019-11-18T22:33:54" xmlns:UML="http://schema.omg.org/spec/UML/1.4">
+=======
+<XMI verified="false" xmi.version="1.2" timestamp="2019-11-19T22:27:21" xmlns:UML="http://schema.omg.org/spec/UML/1.4">
+>>>>>>> Stashed changes
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -51,6 +55,10 @@
         <UML:Generalization xmi.idref="u063LT0mgIn2j"/>
         <UML:Generalization xmi.idref="ulnAUNnzK1Jei"/>
         <UML:Generalization xmi.idref="ucld15X4bHo9q"/>
+        <UML:Generalization xmi.idref="uL8xmDjrI0jhb"/>
+        <UML:Generalization xmi.idref="uZ3UN9bxX4Fqd"/>
+        <UML:Generalization xmi.idref="u8PUeIyR3wixC"/>
+        <UML:Generalization xmi.idref="uwxsJUmeygGPl"/>
        </UML:GeneralizableElement.generalization>
        <UML:Classifier.feature>
         <UML:Attribute visibility="private" isSpecification="false" xmi.id="uYZzBvJPjnuiI" type="uKaVVDhoYGe2f" name="cost"/>
@@ -70,7 +78,12 @@
       <UML:Class visibility="public" isSpecification="false" namespace="Logical_View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ujOfqtoacuNnE" name="Creature">
        <UML:GeneralizableElement.generalization>
         <UML:Generalization xmi.idref="un8bP1xae3qZv"/>
+<<<<<<< Updated upstream
         <UML:Generalization xmi.idref="uKBXd4xdaIlFS"/>
+=======
+        <UML:Generalization xmi.idref="uP5bd6Pv9GSl7"/>
+        <UML:Generalization xmi.idref="uuNIEg3yM42Rd"/>
+>>>>>>> Stashed changes
        </UML:GeneralizableElement.generalization>
        <UML:Classifier.feature>
         <UML:Attribute visibility="private" isSpecification="false" xmi.id="uQVLWyzgvs6nZ" type="uKaVVDhoYGe2f" name="strength"/>
@@ -83,7 +96,12 @@
       <UML:Class visibility="public" isSpecification="false" namespace="Logical_View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="u3c6sm7FlWsFY" name="Artefact">
        <UML:GeneralizableElement.generalization>
         <UML:Generalization xmi.idref="ujFWHFak2hMRg"/>
+<<<<<<< Updated upstream
         <UML:Generalization xmi.idref="u4bFB5IYeZFfv"/>
+=======
+        <UML:Generalization xmi.idref="ugexC2t3eRr3D"/>
+        <UML:Generalization xmi.idref="uAddfSOVWlvbw"/>
+>>>>>>> Stashed changes
        </UML:GeneralizableElement.generalization>
        <UML:Classifier.feature>
         <UML:Attribute visibility="private" isSpecification="false" xmi.id="uNtu2MWBT5CV5" type="ujOfqtoacuNnE" name="stuffed"/>
@@ -157,7 +175,12 @@
       <UML:Class visibility="public" isSpecification="false" namespace="Logical_View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uXY1rZ0BilkaH" name="Spell">
        <UML:GeneralizableElement.generalization>
         <UML:Generalization xmi.idref="uKCm9tR9V275W"/>
+<<<<<<< Updated upstream
         <UML:Generalization xmi.idref="uO9CjbRkpSfXA"/>
+=======
+        <UML:Generalization xmi.idref="u8zywXuI5rY1i"/>
+        <UML:Generalization xmi.idref="uKuPwIjFowipu"/>
+>>>>>>> Stashed changes
        </UML:GeneralizableElement.generalization>
        <UML:Classifier.feature>
         <UML:Attribute visibility="private" isSpecification="false" ownerScope="classifier" xmi.id="ufVQjK4CxUOWZ" type="uIUyteslo9dXM" initialValue="&quot;Spell&quot;" name="type"/>
@@ -166,8 +189,13 @@
       <UML:Class visibility="public" isSpecification="false" namespace="Logical_View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uStMzI9zHPV6S" name="Field">
        <UML:GeneralizableElement.generalization>
         <UML:Generalization xmi.idref="uTfmxg0yfR5LO"/>
+<<<<<<< Updated upstream
         <UML:Generalization xmi.idref="ugGNYX4koPrNv"/>
         <UML:Generalization xmi.idref="uCtejG9d9TNVv"/>
+=======
+        <UML:Generalization xmi.idref="uGptGvFtfDRVO"/>
+        <UML:Generalization xmi.idref="uou5p9ywexiSg"/>
+>>>>>>> Stashed changes
        </UML:GeneralizableElement.generalization>
        <UML:Classifier.feature>
         <UML:Attribute visibility="private" isSpecification="false" ownerScope="classifier" xmi.id="ucmzuopqxfeuQ" type="uIUyteslo9dXM" initialValue="&quot;Field&quot;" name="type"/>
@@ -179,6 +207,7 @@
       <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uPAFGXoq08RiT" xmi.id="u063LT0mgIn2j" parent="u3c6sm7FlWsFY" name=""/>
       <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uPAFGXoq08RiT" xmi.id="ulnAUNnzK1Jei" parent="uXY1rZ0BilkaH" name=""/>
       <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uPAFGXoq08RiT" xmi.id="ucld15X4bHo9q" parent="uStMzI9zHPV6S" name=""/>
+<<<<<<< Updated upstream
       <UML:Class visibility="public" isSpecification="false" namespace="Logical_View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uVIqn7BLEsG5U" name="Hand">
        <UML:GeneralizableElement.generalization>
         <UML:Generalization xmi.idref="uT41MPplv5zMx"/>
@@ -323,6 +352,24 @@
      <XMI.extension xmi.extender="umbrello">
       <diagrams resolution="96">
        <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="class diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="836.538" canvaswidth="911.688" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="70,7570576448898" xmi.id="udlwSpp5wpGYo" documentation="" showscope="1" snapgrid="0" showatts="1" type="1">
+=======
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="ujOfqtoacuNnE" xmi.id="uP5bd6Pv9GSl7" parent="uPAFGXoq08RiT" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="u3c6sm7FlWsFY" xmi.id="ugexC2t3eRr3D" parent="uPAFGXoq08RiT" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uXY1rZ0BilkaH" xmi.id="u8zywXuI5rY1i" parent="uPAFGXoq08RiT" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uStMzI9zHPV6S" xmi.id="uGptGvFtfDRVO" parent="uPAFGXoq08RiT" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uPAFGXoq08RiT" xmi.id="uL8xmDjrI0jhb" parent="ujOfqtoacuNnE" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uPAFGXoq08RiT" xmi.id="uZ3UN9bxX4Fqd" parent="u3c6sm7FlWsFY" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uPAFGXoq08RiT" xmi.id="u8PUeIyR3wixC" parent="uXY1rZ0BilkaH" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uPAFGXoq08RiT" xmi.id="uwxsJUmeygGPl" parent="uStMzI9zHPV6S" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="ujOfqtoacuNnE" xmi.id="uuNIEg3yM42Rd" parent="uPAFGXoq08RiT" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="u3c6sm7FlWsFY" xmi.id="uAddfSOVWlvbw" parent="uPAFGXoq08RiT" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uXY1rZ0BilkaH" xmi.id="uKuPwIjFowipu" parent="uPAFGXoq08RiT" name=""/>
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical_View" child="uStMzI9zHPV6S" xmi.id="uou5p9ywexiSg" parent="uPAFGXoq08RiT" name=""/>
+     </UML:Namespace.ownedElement>
+     <XMI.extension xmi.extender="umbrello">
+      <diagrams resolution="96">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="class diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="746.043" canvaswidth="838.616" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="81,37061629162325" xmi.id="udlwSpp5wpGYo" documentation="" showscope="1" snapgrid="0" showatts="1" type="1">
+>>>>>>> Stashed changes
         <widgets>
          <classwidget linecolor="#000000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="-861.319" showattsigs="601" showstereotype="1" y="-1190.27" showattributes="1" font="Sans Serif,9,-1,0,50,0,0,0,0,0" drawascircle="0" localid="uoqXRzsTQTJH3" width="124.749" isinstance="0" usefillcolor="1" fillcolor="#91b6ff" xmi.id="uPAFGXoq08RiT" autoresize="0" showscope="1" height="135" showopsigs="601"/>
          <classwidget linecolor="#340000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="-1203.57" showattsigs="601" showstereotype="1" y="-1063.83" showattributes="1" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="uUhnnRaV81cAj" width="188" isinstance="0" usefillcolor="1" fillcolor="#91b6ff" xmi.id="ujOfqtoacuNnE" autoresize="0" showscope="1" height="97" showopsigs="601"/>
@@ -414,26 +461,42 @@
           </linepath>
           <floatingtext linecolor="#ff0000" usesdiagramfillcolor="1" linewidth="0" textcolor="none" usesdiagramusefillcolor="1" x="-804" showstereotype="1" y="-1271" text="0..*" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="uQIhPdThgJhRN" pretext="" role="701" width="28" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="uZBh94xtHuJ9a" autoresize="1" height="19"/>
          </assocwidget>
+<<<<<<< Updated upstream
          <assocwidget indexa="1" linecolor="#000000" indexb="1" usesdiagramfillcolor="0" widgetbid="uMTXQDkx5teoj" linewidth="0" seqnum="" textcolor="#000000" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" widgetaid="uVYaiWv6zQb9Z" font="Sans Serif,9,-1,0,50,0,0,0,0,0" usefillcolor="1" fillcolor="#ffff00" xmi.id="ux39SDd1cQ6P9" autoresize="1" type="503">
+=======
+         <assocwidget indexa="1" linecolor="#ff0000" indexb="1" usesdiagramfillcolor="1" widgetbid="uPAFGXoq08RiT" linewidth="0" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" widgetaid="ujOfqtoacuNnE" font="Sans Serif,9,-1,0,50,0,0,0,0,0" usefillcolor="1" fillcolor="none" xmi.id="uuNIEg3yM42Rd" autoresize="1" type="500">
+>>>>>>> Stashed changes
           <linepath layout="Direct">
            <startpoint startx="-806.842" starty="-1384.41"/>
            <endpoint endx="-806.842" endy="-1322.23"/>
           </linepath>
           <floatingtext linecolor="#ff0000" usesdiagramfillcolor="1" linewidth="0" textcolor="none" usesdiagramusefillcolor="1" x="-804" showstereotype="1" y="-1382" text="*..0" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="uKK6egJUjqSAs" pretext="" role="701" width="28" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="uWfgtEgc6G5cQ" autoresize="1" height="19"/>
          </assocwidget>
+<<<<<<< Updated upstream
          <assocwidget indexa="1" linecolor="#000000" indexb="1" usesdiagramfillcolor="0" widgetbid="uu4gP0qpqsxv0" linewidth="0" seqnum="" textcolor="#000000" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" widgetaid="uxCZP3QQ0KcRg" font="Sans Serif,9,-1,0,50,0,0,0,0,0" usefillcolor="1" fillcolor="#ffff00" xmi.id="uK6NeScbAnHwt" autoresize="1" type="500">
+=======
+         <assocwidget indexa="1" linecolor="#ff0000" indexb="1" usesdiagramfillcolor="1" widgetbid="uPAFGXoq08RiT" linewidth="0" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" widgetaid="u3c6sm7FlWsFY" font="Sans Serif,9,-1,0,50,0,0,0,0,0" usefillcolor="1" fillcolor="none" xmi.id="uAddfSOVWlvbw" autoresize="1" type="500">
+>>>>>>> Stashed changes
           <linepath layout="Direct">
            <startpoint startx="-702.911" starty="-1454.08"/>
            <endpoint endx="-553.462" endy="-1454.08"/>
           </linepath>
          </assocwidget>
+<<<<<<< Updated upstream
          <assocwidget indexa="1" linecolor="#000000" indexb="1" usesdiagramfillcolor="0" widgetbid="uu4gP0qpqsxv0" linewidth="0" seqnum="" textcolor="#000000" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" widgetaid="uVIqn7BLEsG5U" font="Sans Serif,9,-1,0,50,0,0,0,0,0" usefillcolor="1" fillcolor="#ffff00" xmi.id="uT41MPplv5zMx" autoresize="1" type="500">
+=======
+         <assocwidget indexa="1" linecolor="#ff0000" indexb="1" usesdiagramfillcolor="1" widgetbid="uPAFGXoq08RiT" linewidth="0" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" widgetaid="uXY1rZ0BilkaH" font="Sans Serif,9,-1,0,50,0,0,0,0,0" usefillcolor="1" fillcolor="none" xmi.id="uKuPwIjFowipu" autoresize="1" type="500">
+>>>>>>> Stashed changes
           <linepath layout="Direct">
            <startpoint startx="-737.245" starty="-1609.65"/>
            <endpoint endx="-553.462" endy="-1544.08"/>
           </linepath>
          </assocwidget>
+<<<<<<< Updated upstream
          <assocwidget indexa="1" linecolor="#000000" indexb="1" usesdiagramfillcolor="0" widgetbid="uu4gP0qpqsxv0" linewidth="0" seqnum="" textcolor="#000000" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" widgetaid="uL3dN6pcagVhP" font="Sans Serif,9,-1,0,50,0,0,0,0,0" usefillcolor="1" fillcolor="#ffff00" xmi.id="uWzW1SawfgMSP" autoresize="1" type="500">
+=======
+         <assocwidget indexa="1" linecolor="#ff0000" indexb="1" usesdiagramfillcolor="1" widgetbid="uPAFGXoq08RiT" linewidth="0" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" widgetaid="uStMzI9zHPV6S" font="Sans Serif,9,-1,0,50,0,0,0,0,0" usefillcolor="1" fillcolor="none" xmi.id="uou5p9ywexiSg" autoresize="1" type="500">
+>>>>>>> Stashed changes
           <linepath layout="Direct">
            <startpoint startx="-716.297" starty="-1692.36"/>
            <endpoint endx="-553.462" endy="-1544.08"/>
@@ -490,7 +553,11 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
+<<<<<<< Updated upstream
   <docsettings viewid="udlwSpp5wpGYo" uniqueid="u6rp0sU0YsbeT" documentation=""/>
+=======
+  <docsettings viewid="udlwSpp5wpGYo" uniqueid="uCEv3ba1VFhRZ" documentation=""/>
+>>>>>>> Stashed changes
   <listview>
    <listitem open="1" type="800" id="Views">
     <listitem open="1" type="821" id="Component_View"/>
@@ -559,7 +626,10 @@
       <listitem open="0" type="829" id="uu2eOkPuzzaVh"/>
       <listitem open="0" type="829" id="uq4TzYJVtkFPj"/>
       <listitem open="0" type="829" id="uKaVVDhoYGe2f"/>
+<<<<<<< Updated upstream
       <listitem open="1" type="829" id="uqHHRw2GwrKOl"/>
+=======
+>>>>>>> Stashed changes
       <listitem open="0" type="829" id="uxt9w82UqiPEQ"/>
       <listitem open="0" type="829" id="uEqRVpgKPmNWV"/>
       <listitem open="0" type="829" id="uB1aLfnN9KWKM"/>

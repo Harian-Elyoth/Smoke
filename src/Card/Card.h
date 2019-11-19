@@ -6,13 +6,31 @@
 #include "Artefact.h"
 #include "Spell.h"
 #include "Field.h"
+#include "Creature.h"
+#include "Artefact.h"
+#include "Spell.h"
+#include "Field.h"
 
 #include <string>
 #include <vector>
 
 
+<<<<<<< Updated upstream
 class Card {
 		 
+=======
+class Card : public Creature, public Creature, public Artefact, public Spell, public Field, public Creature, public Artefact, public Spell, public Field
+{
+public:
+
+		// Constructors/Destructors
+		//  
+
+
+		/**
+		 * Empty Constructor
+		 */
+>>>>>>> Stashed changes
 		Card ();
 
 		/**
