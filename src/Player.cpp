@@ -1,13 +1,16 @@
-#include "Card.h"
+#include "Player.h"
 
 // Constructors/Destructors
 //  
 
-Card::Card () {
-initAttributes();
+Player::Player()
+{
+  initAttributes();
 }
 
-Card::~Card () { }
+Player::~Player()
+{
+}
 
 //  
 // Methods
@@ -21,6 +24,7 @@ Card::~Card () { }
 // Other methods
 //  
 
-void Card::initAttributes () {
+void Player::initAttributes()
+{
 }
 

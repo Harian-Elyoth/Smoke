@@ -1,18 +1,21 @@
 
-#ifndef DISCARD_H
-#define DISCARD_H
+#ifndef BATTLEGROUND_H
+#define BATTLEGROUND_H
+#include "CardList.h"
 
 #include <string>
+#include <vector>
+
+
 
 /**
-  * class Discard
+  * class Battleground
   * 
   */
 
-class Discard
+class Battleground : public CardList
 {
 public:
-
   // Constructors/Destructors
   //  
 
@@ -20,12 +23,12 @@ public:
   /**
    * Empty Constructor
    */
-  Discard ();
+  Battleground();
 
   /**
    * Empty Destructor
    */
-  virtual ~Discard ();
+  virtual ~Battleground();
 
   // Static Public attributes
   //  
@@ -42,57 +45,65 @@ public:
   //  
 
 
-protected:
 
+  /**
+   */
+  void show()
+  {
+  }
+
+protected:
   // Static Protected attributes
   //  
 
   // Protected attributes
   //  
 
-public:
-
 
   // Protected attribute accessor methods
   //  
 
-protected:
-
-public:
-
 
   // Protected attribute accessor methods
-  //  
-
-protected:
-
+  //
 
 private:
-
   // Static Private attributes
   //  
 
   // Private attributes
   //  
 
-public:
+  vector<Buff*> buffs;
+
+  // Private attribute accessor methods
+  //  
 
 
   // Private attribute accessor methods
   //  
 
-private:
 
-public:
+  /**
+   * Set the value of buffs
+   * @param new_var the new value of buffs
+   */
+  void setBuffs(vector<Buff*> new_var)
+  {
+    buffs = new_var;
+  }
 
+  /**
+   * Get the value of buffs
+   * @return the value of buffs
+   */
+  vector<Buff*> getBuffs()
+  {
+    return buffs;
+  }
 
-  // Private attribute accessor methods
-  //  
-
-private:
-
-
+  void initAttributes();
 
 };
 
-#endif // DISCARD_H
+#endif // BATTLEGROUND_H

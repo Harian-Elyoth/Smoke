@@ -1,18 +1,19 @@
 
-#ifndef DECK_H
-#define DECK_H
+#ifndef GRAVEYARD_H
+#define GRAVEYARD_H
+#include "CardList.h"
+#include "CardList.h"
 
 #include <string>
 
 /**
-  * class Deck
+  * class Graveyard
   * 
   */
 
-class Deck
+class Graveyard : public CardList, public CardList
 {
 public:
-
   // Constructors/Destructors
   //  
 
@@ -20,12 +21,12 @@ public:
   /**
    * Empty Constructor
    */
-  Deck ();
+  Graveyard();
 
   /**
    * Empty Destructor
    */
-  virtual ~Deck ();
+  virtual ~Graveyard();
 
   // Static Public attributes
   //  
@@ -42,57 +43,60 @@ public:
   //  
 
 
-protected:
 
+  /**
+   */
+  void show()
+  {
+  }
+
+
+  /**
+   * @return Card*
+   * @param  card
+   */
+  Card* getCard(Card* card)
+  {
+  }
+
+
+  /**
+   * @param  card
+   */
+  void exile(Card* card)
+  {
+  }
+
+protected:
   // Static Protected attributes
   //  
 
   // Protected attributes
   //  
 
-public:
-
 
   // Protected attribute accessor methods
   //  
 
-protected:
-
-public:
-
 
   // Protected attribute accessor methods
-  //  
-
-protected:
-
+  //
 
 private:
-
   // Static Private attributes
   //  
 
   // Private attributes
   //  
 
-public:
-
 
   // Private attribute accessor methods
   //  
 
-private:
-
-public:
-
 
   // Private attribute accessor methods
-  //  
-
-private:
-
-
+  //
 
 };
 
-#endif // DECK_H
+#endif // GRAVEYARD_H

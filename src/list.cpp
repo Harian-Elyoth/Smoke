@@ -1,12 +1,15 @@
-#include "Deck.h"
+#include "list.h"
 
 // Constructors/Destructors
 //  
 
-Deck::Deck () {
+list::list()
+{
 }
 
-Deck::~Deck () { }
+list::~list()
+{
+}
 
 //  
 // Methods

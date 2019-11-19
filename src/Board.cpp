@@ -3,11 +3,14 @@
 // Constructors/Destructors
 //  
 
-Board::Board () {
-initAttributes();
+Board::Board()
+{
+  initAttributes();
 }
 
-Board::~Board () { }
+Board::~Board()
+{
+}
 
 //  
 // Methods
@@ -18,6 +21,10 @@ Board::~Board () { }
 //  
 
 
-void Board::initAttributes () {
+// Other methods
+//  
+
+void Board::initAttributes()
+{
 }
 

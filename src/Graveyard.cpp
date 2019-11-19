@@ -1,12 +1,15 @@
-#include "Discard.h"
+#include "Graveyard.h"
 
 // Constructors/Destructors
 //  
 
-Discard::Discard () {
+Graveyard::Graveyard()
+{
 }
 
-Discard::~Discard () { }
+Graveyard::~Graveyard()
+{
+}
 
 //  
 // Methods
