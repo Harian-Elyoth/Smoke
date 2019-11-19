@@ -2,9 +2,10 @@
 #ifndef ARTEFACT_H
 #define ARTEFACT_H
 #include "Card.h"
+#include "Card.h"
 
 #include <string>
-class Artefact : virtual public Card
+class Artefact : virtual public Card, virtual public Card
 {
 public:
 
