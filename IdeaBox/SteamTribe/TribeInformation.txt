@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 The Steam Tribe (white) use the Steam Core Field as the main Card in the deck
 The purpose is to generate a lot of steam to spawn epic SteamPunk Creature
 With great offense and deffense stats. 
@@ -5,3 +6,10 @@ The Steam Core generate a lot of Steam per turn enhanced by steam Creature.
 
 
 
+=======
+The Steam Tribe use the Steam Core Field as the main Card in the deck
+The purpose is to generate a lot of steam to spawn epic SteamPunk Creature
+With great offense and deffense stats. 
+The Steam Core generate a lot of Steam per turn enhanced by steam Creature.
+
+>>>>>>> master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Cost 0 :
 
     Steam Gear :
@@ -90,4 +91,83 @@ Cost 8 :
 
 
         
+=======
+Cost 0 :
+
+    Steam Gear :
+        Stat : 1/1
+        Effect : When summoned Generate 2 Smoke, 5 if Steam core is on the board.
+    
+    Steam Light :
+        Stat : 0/2
+        Effect : When Steam Light die, Generate 2 Smoke, 5 If Steam Core is on the board.
+    
+    Steam worker :
+        Stat : 2/1
+        Effect : When summoned Draw one Steam Core, from your deck to your hand
+
+Cost 1 :
+
+    Steam Mecha Warrior :
+        Stat : 2/2
+        Effect : The Steam Mecha Warrior has +1/+0 if the Steam Core is on the battlefield
+    
+
+    Steam Automaton :
+        Stat : 1/2
+        Effect : When the Automaton enter into the battlefield, reduce by two the cost of the next Steam 
+        card you play.
+
+Cost 2 :
+
+    Steam Boiling Defender :
+        Stat : 1/4
+        Effect : You can use 5 Smoke to switch the strength and the health of this card, if you do that 
+        The Steam Defender gain invincible until the end of the turn.
+    
+Cost 3 :
+
+    Steam Cat :
+        Stat : 1/1
+        Effect : When the Steam Cat enter into the battlefield, draw a card. When the Steam Cat dies, 
+        summon a two or less cost card from your deck to your hand.
+    
+    Steam Boiler :
+        Stat : 3/4
+        Effect : When the Steam Boiler enter into the battlefield with a creature card effect, draw a card. If it's a creature summon it on your battlefield,
+        else discard it.
+
+Cost 4 :
+
+    Steam Fed Cat :
+        Stat : 2/2
+        Effect : When the Steam Fed Cat enter into the battlefield, discard one card. If it's a creature summon it from your battlefield.
+
+Cost 5 :
+
+    Steam Locomotive :
+        Stat : 3/3
+        Effect : Steam Locomotive has +1/+1 for each Steam Creature of your BattleField.
+
+Cost 6 : 
+
+    Steam Golem : 
+        Stat : 8/10
+        Effect :  The Steam Golem can't attack.
+
+Cost 8 :
+
+    Steam King : 
+        Stat : X/X
+        Effect : Entering on the battlefield, Steam King has +1/+1 for each Steam Creature on your battlefield, 
+        Once per turn Steam King can destroy one ennemy card, if you do this effect while Steam Core is on the battlefield, draw a card.
+
+    
+    
+
+
+
+
+        
+>>>>>>> master
     
