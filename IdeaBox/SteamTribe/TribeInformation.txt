@@ -1,15 +1,13 @@
-<<<<<<< HEAD
-The Steam Tribe (white) use the Steam Core Field as the main Card in the deck
-The purpose is to generate a lot of steam to spawn epic SteamPunk Creature
-With great offense and deffense stats. 
-The Steam Core generate a lot of Steam per turn enhanced by steam Creature.
+The Steam Tribe (white) comes from the State of the Art Citadel of BelWard
+Long time ago, The Belward Dwarf made a lot of automaton to help them at work.
+To Greedy the dwarf claimed the treasure of the BlackRock Mountain. They didn't expect The Burned and hostile creature in there.
+The dwarf people were killed letting the Automaton rules the city.
 
 
-
-=======
 The Steam Tribe use the Steam Core Field as the main Card in the deck
 The purpose is to generate a lot of steam to spawn epic SteamPunk Creature
 With great offense and deffense stats. 
 The Steam Core generate a lot of Steam per turn enhanced by steam Creature.
 
->>>>>>> master
+
+
