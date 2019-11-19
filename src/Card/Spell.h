@@ -2,9 +2,10 @@
 #ifndef SPELL_H
 #define SPELL_H
 #include "Card.h"
+#include "Card.h"
 
 #include <string>
-class Spell : virtual public Card
+class Spell : virtual public Card, virtual public Card
 {
 public:
 

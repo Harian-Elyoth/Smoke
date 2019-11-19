@@ -2,9 +2,10 @@
 #ifndef CREATURE_H
 #define CREATURE_H
 #include "Card.h"
+#include "Card.h"
 
 #include <string>
-class Creature : virtual public Card
+class Creature : virtual public Card, virtual public Card
 {
 public:
 
