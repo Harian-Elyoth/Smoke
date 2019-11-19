@@ -11,17 +11,8 @@
 #include <vector>
 
 
-class Card : public Creature, public Creature, public Artefact, public Spell, public Field
-{
-public:
-
-		// Constructors/Destructors
-		//  
-
-
-		/**
-		 * Empty Constructor
-		 */
+class Card {
+		 
 		Card ();
 
 		/**
