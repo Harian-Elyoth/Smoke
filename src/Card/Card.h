@@ -6,20 +6,20 @@
 #include "Artefact.h"
 #include "Spell.h"
 #include "Field.h"
-#include "Creature.h"
-#include "Artefact.h"
 #include "Spell.h"
-#include "Field.h"
+#include "Spell.h"
 
 #include <string>
 #include <vector>
 
 
-<<<<<<< Updated upstream
-class Card {
-		 
-=======
-class Card : public Creature, public Creature, public Artefact, public Spell, public Field, public Creature, public Artefact, public Spell, public Field
+
+/**
+  * class Card
+  * 
+  */
+
+class Card : public Creature, public Creature, public Artefact, public Spell, public Field, public Spell, public Spell
 {
 public:
 
@@ -30,13 +30,26 @@ public:
 		/**
 		 * Empty Constructor
 		 */
->>>>>>> Stashed changes
 		Card ();
 
 		/**
 		 * Empty Destructor
 		 */
 		virtual ~Card ();
+
+		// Static Public attributes
+		//  
+
+		// Public attributes
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+		// Public attribute accessor methods
+		//  
 
 
 
@@ -56,16 +69,33 @@ public:
 
 protected:
 
+		// Static Protected attributes
+		//  
+
+		// Protected attributes
+		//  
+
 public:
+
+
+		// Protected attribute accessor methods
+		//  
 
 protected:
 
 public:
+
+
+		// Protected attribute accessor methods
+		//  
 
 protected:
 
 
 private:
+
+		// Static Private attributes
+		//  
 
 		// Private attributes
 		//  
@@ -75,7 +105,12 @@ private:
 		Player owner;
 		std::string tribe;
 		std::string type;
+		vector<Buff*> buffs;
 public:
+
+
+		// Private attribute accessor methods
+		//  
 
 private:
 
@@ -164,6 +199,22 @@ public:
 		 */
 		std::string getType ()		 {
 				return type;
+		}
+
+		/**
+		 * Set the value of buffs
+		 * @param new_var the new value of buffs
+		 */
+		void setBuffs (vector<Buff*> new_var)		 {
+						buffs = new_var;
+		}
+
+		/**
+		 * Get the value of buffs
+		 * @return the value of buffs
+		 */
+		vector<Buff*> getBuffs ()		 {
+				return buffs;
 		}
 private:
 
