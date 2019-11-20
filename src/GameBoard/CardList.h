@@ -2,6 +2,8 @@
 #ifndef CARDLIST_H
 #define CARDLIST_H
 
+#include "Card.h"
+
 #include <string>
 #include <vector>
 
@@ -44,27 +46,9 @@ public:
 		/**
 		 * @param  cList
 		 */
-		void add (list <Card*> cList)
+		void add (vector<Card*> cList)
 		{
 		}
-
-
-		/**
-		 * @return Card*
-		 */
-		Card* draw ()
-		{
-		}
-
-protected:
-
-public:
-
-protected:
-
-public:
-
-protected:
 
 
 private:
@@ -73,16 +57,11 @@ private:
 		//  
 
 		int length;
-public:
 
-private:
-
-public:
 
 
 		// Private attribute accessor methods
 		//  
-
 
 		/**
 		 * Set the value of length
@@ -99,8 +78,6 @@ public:
 		int getLength ()		 {
 				return length;
 		}
-private:
-
 
 		void initAttributes () ;
 
