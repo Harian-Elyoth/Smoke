@@ -1,19 +1,16 @@
 
-#ifndef FIELD_H
-#define FIELD_H
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
+#ifndef HAND_H
+#define HAND_H
+#include "CardList.h"
 
 #include <string>
 
 /**
-  * class Field
+  * class Hand
   * 
   */
 
-class Field : virtual public Card, virtual public Card, virtual public Card, virtual public Card
+class Hand : public CardList
 {
 public:
 
@@ -24,12 +21,12 @@ public:
 		/**
 		 * Empty Constructor
 		 */
-		Field ();
+		Hand ();
 
 		/**
 		 * Empty Destructor
 		 */
-		virtual ~Field ();
+		virtual ~Hand ();
 
 		// Static Public attributes
 		//  
@@ -49,15 +46,24 @@ public:
 
 		/**
 		 */
-		void effect ()
+		void show ()
 		{
 		}
 
 
 		/**
-		 * @return std::string
+		 * @return Card*
+		 * @param  card
 		 */
-		std::string toString ()
+		Card* discard (Card* card)
+		{
+		}
+
+
+		/**
+		 * @param  card
+		 */
+		void burn (Card* card)
 		{
 		}
 
@@ -91,7 +97,6 @@ private:
 		// Static Private attributes
 		//  
 
-		static std::string type;
 		// Private attributes
 		//  
 
@@ -101,22 +106,6 @@ public:
 		// Private attribute accessor methods
 		//  
 
-
-		/**
-		 * Set the value of type
-		 * @param new_var the new value of type
-		 */
-		void setType (std::string new_var)		 {
-						Field::type = new_var;
-		}
-
-		/**
-		 * Get the value of type
-		 * @return the value of type
-		 */
-		std::string getType ()		 {
-				return Field::type;
-		}
 private:
 
 public:
@@ -128,8 +117,7 @@ public:
 private:
 
 
-		void initAttributes () ;
 
 };
 
-#endif // FIELD_H
+#endif // HAND_H

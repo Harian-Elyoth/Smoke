@@ -3,6 +3,12 @@
 #define PLAYER_H
 
 #include <string>
+
+/**
+  * class Player
+  * 
+  */
+
 class Player
 {
 public:
@@ -21,19 +27,58 @@ public:
 		 */
 		virtual ~Player ();
 
+		// Static Public attributes
+		//  
+
+		// Public attributes
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+
+		/**
+		 * @param  card
+		 */
+		void play (Card* card)
+		{
+		}
+
+protected:
+
+		// Static Protected attributes
+		//  
+
+		// Protected attributes
+		//  
+
+public:
+
+
+		// Protected attribute accessor methods
+		//  
 
 protected:
 
 public:
 
-protected:
 
-public:
+		// Protected attribute accessor methods
+		//  
 
 protected:
 
 
 private:
+
+		// Static Private attributes
+		//  
 
 		// Private attributes
 		//  
@@ -41,11 +86,18 @@ private:
 		// 		
 		std::string name;
 		int smoke;
-		CardList hand;
-		CardList discard;
-		CardList deck;
-		CardList battleground;
+		Hand hand;
+		Graveyard graveyard;
+		Deck deck;
+		Battleground battleground;
+		std::string hero;
+		bool normalSummon;
+		bool fullBoard;
 public:
+
+
+		// Private attribute accessor methods
+		//  
 
 private:
 
@@ -94,7 +146,7 @@ public:
 		 * Set the value of hand
 		 * @param new_var the new value of hand
 		 */
-		void setHand (CardList new_var)		 {
+		void setHand (Hand new_var)		 {
 						hand = new_var;
 		}
 
@@ -102,31 +154,31 @@ public:
 		 * Get the value of hand
 		 * @return the value of hand
 		 */
-		CardList getHand ()		 {
+		Hand getHand ()		 {
 				return hand;
 		}
 
 		/**
-		 * Set the value of discard
-		 * @param new_var the new value of discard
+		 * Set the value of graveyard
+		 * @param new_var the new value of graveyard
 		 */
-		void setDiscard (CardList new_var)		 {
-						discard = new_var;
+		void setGraveyard (Graveyard new_var)		 {
+						graveyard = new_var;
 		}
 
 		/**
-		 * Get the value of discard
-		 * @return the value of discard
+		 * Get the value of graveyard
+		 * @return the value of graveyard
 		 */
-		CardList getDiscard ()		 {
-				return discard;
+		Graveyard getGraveyard ()		 {
+				return graveyard;
 		}
 
 		/**
 		 * Set the value of deck
 		 * @param new_var the new value of deck
 		 */
-		void setDeck (CardList new_var)		 {
+		void setDeck (Deck new_var)		 {
 						deck = new_var;
 		}
 
@@ -134,7 +186,7 @@ public:
 		 * Get the value of deck
 		 * @return the value of deck
 		 */
-		CardList getDeck ()		 {
+		Deck getDeck ()		 {
 				return deck;
 		}
 
@@ -142,7 +194,7 @@ public:
 		 * Set the value of battleground
 		 * @param new_var the new value of battleground
 		 */
-		void setBattleground (CardList new_var)		 {
+		void setBattleground (Battleground new_var)		 {
 						battleground = new_var;
 		}
 
@@ -150,8 +202,56 @@ public:
 		 * Get the value of battleground
 		 * @return the value of battleground
 		 */
-		CardList getBattleground ()		 {
+		Battleground getBattleground ()		 {
 				return battleground;
+		}
+
+		/**
+		 * Set the value of hero
+		 * @param new_var the new value of hero
+		 */
+		void setHero (std::string new_var)		 {
+						hero = new_var;
+		}
+
+		/**
+		 * Get the value of hero
+		 * @return the value of hero
+		 */
+		std::string getHero ()		 {
+				return hero;
+		}
+
+		/**
+		 * Set the value of normalSummon
+		 * @param new_var the new value of normalSummon
+		 */
+		void setNormalSummon (bool new_var)		 {
+						normalSummon = new_var;
+		}
+
+		/**
+		 * Get the value of normalSummon
+		 * @return the value of normalSummon
+		 */
+		bool getNormalSummon ()		 {
+				return normalSummon;
+		}
+
+		/**
+		 * Set the value of fullBoard
+		 * @param new_var the new value of fullBoard
+		 */
+		void setFullBoard (bool new_var)		 {
+						fullBoard = new_var;
+		}
+
+		/**
+		 * Get the value of fullBoard
+		 * @return the value of fullBoard
+		 */
+		bool getFullBoard ()		 {
+				return fullBoard;
 		}
 private:
 

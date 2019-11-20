@@ -1,6 +1,10 @@
 
 #ifndef CARDLIST_H
 #define CARDLIST_H
+#include "Deck.h"
+#include "Hand.h"
+#include "Graveyard.h"
+#include "Battleground.h"
 
 #include "Card.h"
 
@@ -8,7 +12,13 @@
 #include <vector>
 
 
-class CardList
+
+/**
+  * class CardList
+  * 
+  */
+
+class CardList : public Deck, public Hand, public Graveyard, public Battleground
 {
 public:
 
@@ -26,19 +36,26 @@ public:
 		 */
 		virtual ~CardList ();
 
+		// Static Public attributes
+		//  
+
+		// Public attributes
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
 
 
 		/**
+		 * @param  card
 		 */
-		void shuffle ()
-		{
-		}
-
-
-		/**
-		 * @param  c
-		 */
-		void add (Card * c)
+		void add (Card* card)
 		{
 		}
 
@@ -51,32 +68,44 @@ public:
 		}
 
 
+		/**
+		 */
+		void add (vector<Card*> cList)
+		{
+		}
+
+
 private:
+
+		// Static Private attributes
+		//  
 
 		// Private attributes
 		//  
 
 		int length;
+public:
 
+private:
 
 
 		// Private attribute accessor methods
 		//  
 
 		/**
-		 * Set the value of length
-		 * @param new_var the new value of length
+		 * Set the value of cList
+		 * @param new_var the new value of cList
 		 */
-		void setLength (int new_var)		 {
-						length = new_var;
+		void setCList (vector<Card*> new_var)		 {
+						cList = new_var;
 		}
 
 		/**
-		 * Get the value of length
-		 * @return the value of length
+		 * Get the value of cList
+		 * @return the value of cList
 		 */
-		int getLength ()		 {
-				return length;
+		vector<Card*> getCList ()		 {
+				return cList;
 		}
 
 		void initAttributes () ;

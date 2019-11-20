@@ -1,19 +1,19 @@
 
-#ifndef FIELD_H
-#define FIELD_H
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
+#ifndef BATTLEGROUND_H
+#define BATTLEGROUND_H
+#include "CardList.h"
 
 #include <string>
+#include <vector>
+
+
 
 /**
-  * class Field
+  * class Battleground
   * 
   */
 
-class Field : virtual public Card, virtual public Card, virtual public Card, virtual public Card
+class Battleground : public CardList
 {
 public:
 
@@ -24,12 +24,12 @@ public:
 		/**
 		 * Empty Constructor
 		 */
-		Field ();
+		Battleground ();
 
 		/**
 		 * Empty Destructor
 		 */
-		virtual ~Field ();
+		virtual ~Battleground ();
 
 		// Static Public attributes
 		//  
@@ -49,15 +49,7 @@ public:
 
 		/**
 		 */
-		void effect ()
-		{
-		}
-
-
-		/**
-		 * @return std::string
-		 */
-		std::string toString ()
+		void show ()
 		{
 		}
 
@@ -91,32 +83,16 @@ private:
 		// Static Private attributes
 		//  
 
-		static std::string type;
 		// Private attributes
 		//  
 
+		vector<Buff*> buffs;
 public:
 
 
 		// Private attribute accessor methods
 		//  
 
-
-		/**
-		 * Set the value of type
-		 * @param new_var the new value of type
-		 */
-		void setType (std::string new_var)		 {
-						Field::type = new_var;
-		}
-
-		/**
-		 * Get the value of type
-		 * @return the value of type
-		 */
-		std::string getType ()		 {
-				return Field::type;
-		}
 private:
 
 public:
@@ -125,6 +101,22 @@ public:
 		// Private attribute accessor methods
 		//  
 
+
+		/**
+		 * Set the value of buffs
+		 * @param new_var the new value of buffs
+		 */
+		void setBuffs (vector<Buff*> new_var)		 {
+						buffs = new_var;
+		}
+
+		/**
+		 * Get the value of buffs
+		 * @return the value of buffs
+		 */
+		vector<Buff*> getBuffs ()		 {
+				return buffs;
+		}
 private:
 
 
@@ -132,4 +124,4 @@ private:
 
 };
 
-#endif // FIELD_H
+#endif // BATTLEGROUND_H

@@ -2,9 +2,17 @@
 #ifndef ARTEFACT_H
 #define ARTEFACT_H
 #include "Card.h"
+#include "Card.h"
+#include "Card.h"
 
 #include <string>
-class Artefact : virtual public Card
+
+/**
+  * class Artefact
+  * 
+  */
+
+class Artefact : virtual public Card, virtual public Card, virtual public Card
 {
 public:
 
@@ -22,14 +30,57 @@ public:
 		 */
 		virtual ~Artefact ();
 
+		// Static Public attributes
+		//  
+
+		// Public attributes
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+
+		/**
+		 */
+		void effect ()
+		{
+		}
+
+
+		/**
+		 * @return std::string
+		 */
+		std::string toString ()
+		{
+		}
+
+protected:
+
+		// Static Protected attributes
+		//  
+
+		// Protected attributes
+		//  
+
+public:
+
+
+		// Protected attribute accessor methods
+		//  
 
 protected:
 
 public:
 
-protected:
 
-public:
+		// Protected attribute accessor methods
+		//  
 
 protected:
 

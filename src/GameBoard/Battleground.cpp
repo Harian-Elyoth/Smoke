@@ -1,13 +1,13 @@
-#include "Spell.h"
+#include "Battleground.h"
 
 // Constructors/Destructors
 //  
 
-Spell::Spell () {
+Battleground::Battleground () {
 initAttributes();
 }
 
-Spell::~Spell () { }
+Battleground::~Battleground () { }
 
 //  
 // Methods
@@ -21,7 +21,6 @@ Spell::~Spell () { }
 // Other methods
 //  
 
-void Spell::initAttributes () {
-		type = "Spell";
+void Battleground::initAttributes () {
 }
 

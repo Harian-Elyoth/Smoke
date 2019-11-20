@@ -1,12 +1,12 @@
-#include "Discard.h"
+#include "Charge_Creature.h"
 
 // Constructors/Destructors
 //  
 
-Discard::Discard () {
+Charge_Creature::Charge_Creature () {
 }
 
-Discard::~Discard () { }
+Charge_Creature::~Charge_Creature () { }
 
 //  
 // Methods

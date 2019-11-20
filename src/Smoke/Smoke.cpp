@@ -1,13 +1,13 @@
-#include "Spell.h"
+#include "Smoke.h"
 
 // Constructors/Destructors
 //  
 
-Spell::Spell () {
+Smoke::Smoke () {
 initAttributes();
 }
 
-Spell::~Spell () { }
+Smoke::~Smoke () { }
 
 //  
 // Methods
@@ -21,7 +21,7 @@ Spell::~Spell () { }
 // Other methods
 //  
 
-void Spell::initAttributes () {
-		type = "Spell";
+void Smoke::initAttributes () {
+		PlayerTurn = false;
 }
 

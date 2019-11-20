@@ -18,6 +18,9 @@ Field::~Field () { }
 //  
 
 
+// Other methods
+//  
+
 void Field::initAttributes () {
 		type = "Field";
 }

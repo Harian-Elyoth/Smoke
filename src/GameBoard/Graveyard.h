@@ -1,19 +1,17 @@
 
-#ifndef FIELD_H
-#define FIELD_H
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
+#ifndef GRAVEYARD_H
+#define GRAVEYARD_H
+#include "CardList.h"
+#include "CardList.h"
 
 #include <string>
 
 /**
-  * class Field
+  * class Graveyard
   * 
   */
 
-class Field : virtual public Card, virtual public Card, virtual public Card, virtual public Card
+class Graveyard : public CardList, public CardList
 {
 public:
 
@@ -24,12 +22,12 @@ public:
 		/**
 		 * Empty Constructor
 		 */
-		Field ();
+		Graveyard ();
 
 		/**
 		 * Empty Destructor
 		 */
-		virtual ~Field ();
+		virtual ~Graveyard ();
 
 		// Static Public attributes
 		//  
@@ -49,15 +47,24 @@ public:
 
 		/**
 		 */
-		void effect ()
+		void show ()
 		{
 		}
 
 
 		/**
-		 * @return std::string
+		 * @return Card*
+		 * @param  card
 		 */
-		std::string toString ()
+		Card* getCard (Card* card)
+		{
+		}
+
+
+		/**
+		 * @param  card
+		 */
+		void exile (Card* card)
 		{
 		}
 
@@ -91,7 +98,6 @@ private:
 		// Static Private attributes
 		//  
 
-		static std::string type;
 		// Private attributes
 		//  
 
@@ -101,22 +107,6 @@ public:
 		// Private attribute accessor methods
 		//  
 
-
-		/**
-		 * Set the value of type
-		 * @param new_var the new value of type
-		 */
-		void setType (std::string new_var)		 {
-						Field::type = new_var;
-		}
-
-		/**
-		 * Get the value of type
-		 * @return the value of type
-		 */
-		std::string getType ()		 {
-				return Field::type;
-		}
 private:
 
 public:
@@ -128,8 +118,7 @@ public:
 private:
 
 
-		void initAttributes () ;
 
 };
 
-#endif // FIELD_H
+#endif // GRAVEYARD_H
