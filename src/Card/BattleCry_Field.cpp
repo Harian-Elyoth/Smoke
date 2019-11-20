@@ -1,13 +1,12 @@
-#include "Deck.h"
+#include "BattleCry_Field.h"
 
 // Constructors/Destructors
 //  
 
-Deck::Deck () {
-initAttributes();
+BattleCry_Field::BattleCry_Field () {
 }
 
-Deck::~Deck () { }
+BattleCry_Field::~BattleCry_Field () { }
 
 //  
 // Methods
@@ -21,6 +20,4 @@ Deck::~Deck () { }
 // Other methods
 //  
 
-void Deck::initAttributes () {
-}
 

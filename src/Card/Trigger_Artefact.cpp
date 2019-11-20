@@ -1,13 +1,12 @@
-#include "Deck.h"
+#include "Trigger_Artefact.h"
 
 // Constructors/Destructors
 //  
 
-Deck::Deck () {
-initAttributes();
+Trigger_Artefact::Trigger_Artefact () {
 }
 
-Deck::~Deck () { }
+Trigger_Artefact::~Trigger_Artefact () { }
 
 //  
 // Methods
@@ -21,6 +20,4 @@ Deck::~Deck () { }
 // Other methods
 //  
 
-void Deck::initAttributes () {
-}
 

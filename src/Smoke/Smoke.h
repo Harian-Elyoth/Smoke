@@ -1,16 +1,15 @@
 
-#ifndef DECK_H
-#define DECK_H
-#include "CardList.h"
+#ifndef SMOKE_H
+#define SMOKE_H
 
 #include <string>
 
 /**
-  * class Deck
+  * class Smoke
   * 
   */
 
-class Deck : public CardList
+class Smoke
 {
 public:
 
@@ -21,12 +20,12 @@ public:
 		/**
 		 * Empty Constructor
 		 */
-		Deck ();
+		Smoke ();
 
 		/**
 		 * Empty Destructor
 		 */
-		virtual ~Deck ();
+		virtual ~Smoke ();
 
 		// Static Public attributes
 		//  
@@ -46,50 +45,50 @@ public:
 
 		/**
 		 */
-		void show ()
+		void turn ()
 		{
 		}
 
 
 		/**
-		 * @param  card
+		 * @return int
 		 */
-		void burn (Card* card)
+		int main ()
 		{
 		}
 
 
 		/**
-		 * @return Card*
 		 */
-		Card* draw ()
+		void drawPhase ()
 		{
 		}
 
 
 		/**
-		 * @return Card*
-		 * @param  cost
 		 */
-		Card* drawCost (int cost)
+		void mainPhase1 ()
 		{
 		}
 
 
 		/**
-		 * @return Card*
-		 * @param  name
 		 */
-		Card* drawName (std::string name)
+		void battlePhase ()
 		{
 		}
 
 
 		/**
-		 * @return Card*
-		 * @param  tribe
 		 */
-		Card* drawTribe (std::string tribe)
+		void mainPhase2 ()
+		{
+		}
+
+
+		/**
+		 */
+		void endPhase ()
 		{
 		}
 
@@ -126,8 +125,8 @@ private:
 		// Private attributes
 		//  
 
-		std::string tribe1;
-		std::string tribe2;
+		Board board;
+		bool PlayerTurn;
 public:
 
 
@@ -144,35 +143,35 @@ public:
 
 
 		/**
-		 * Set the value of tribe1
-		 * @param new_var the new value of tribe1
+		 * Set the value of board
+		 * @param new_var the new value of board
 		 */
-		void setTribe1 (std::string new_var)		 {
-						tribe1 = new_var;
+		void setBoard (Board new_var)		 {
+						board = new_var;
 		}
 
 		/**
-		 * Get the value of tribe1
-		 * @return the value of tribe1
+		 * Get the value of board
+		 * @return the value of board
 		 */
-		std::string getTribe1 ()		 {
-				return tribe1;
+		Board getBoard ()		 {
+				return board;
 		}
 
 		/**
-		 * Set the value of tribe2
-		 * @param new_var the new value of tribe2
+		 * Set the value of PlayerTurn
+		 * @param new_var the new value of PlayerTurn
 		 */
-		void setTribe2 (std::string new_var)		 {
-						tribe2 = new_var;
+		void setPlayerTurn (bool new_var)		 {
+						PlayerTurn = new_var;
 		}
 
 		/**
-		 * Get the value of tribe2
-		 * @return the value of tribe2
+		 * Get the value of PlayerTurn
+		 * @return the value of PlayerTurn
 		 */
-		std::string getTribe2 ()		 {
-				return tribe2;
+		bool getPlayerTurn ()		 {
+				return PlayerTurn;
 		}
 private:
 
@@ -181,4 +180,4 @@ private:
 
 };
 
-#endif // DECK_H
+#endif // SMOKE_H

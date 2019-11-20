@@ -2,9 +2,17 @@
 #ifndef CREATURE_H
 #define CREATURE_H
 #include "Card.h"
+#include "Card.h"
+#include "Card.h"
 
 #include <string>
-class Creature : virtual public Card
+
+/**
+  * class Creature
+  * 
+  */
+
+class Creature : virtual public Card, virtual public Card, virtual public Card
 {
 public:
 
@@ -22,14 +30,57 @@ public:
 		 */
 		virtual ~Creature ();
 
+		// Static Public attributes
+		//  
+
+		// Public attributes
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+
+		/**
+		 */
+		void effect ()
+		{
+		}
+
+
+		/**
+		 * @return std::string
+		 */
+		std::string toString ()
+		{
+		}
+
+protected:
+
+		// Static Protected attributes
+		//  
+
+		// Protected attributes
+		//  
+
+public:
+
+
+		// Protected attribute accessor methods
+		//  
 
 protected:
 
 public:
 
-protected:
 
-public:
+		// Protected attribute accessor methods
+		//  
 
 protected:
 

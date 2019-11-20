@@ -1,19 +1,16 @@
 
-#ifndef FIELD_H
-#define FIELD_H
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
+#ifndef TRIGGER_FIELD_H
+#define TRIGGER_FIELD_H
+#include "Field.h"
 
 #include <string>
 
 /**
-  * class Field
+  * class Trigger_Field
   * 
   */
 
-class Field : virtual public Card, virtual public Card, virtual public Card, virtual public Card
+class Trigger_Field : public Field
 {
 public:
 
@@ -24,12 +21,12 @@ public:
 		/**
 		 * Empty Constructor
 		 */
-		Field ();
+		Trigger_Field ();
 
 		/**
 		 * Empty Destructor
 		 */
-		virtual ~Field ();
+		virtual ~Trigger_Field ();
 
 		// Static Public attributes
 		//  
@@ -91,7 +88,6 @@ private:
 		// Static Private attributes
 		//  
 
-		static std::string type;
 		// Private attributes
 		//  
 
@@ -101,22 +97,6 @@ public:
 		// Private attribute accessor methods
 		//  
 
-
-		/**
-		 * Set the value of type
-		 * @param new_var the new value of type
-		 */
-		void setType (std::string new_var)		 {
-						Field::type = new_var;
-		}
-
-		/**
-		 * Get the value of type
-		 * @return the value of type
-		 */
-		std::string getType ()		 {
-				return Field::type;
-		}
 private:
 
 public:
@@ -128,8 +108,7 @@ public:
 private:
 
 
-		void initAttributes () ;
 
 };
 
-#endif // FIELD_H
+#endif // TRIGGER_FIELD_H

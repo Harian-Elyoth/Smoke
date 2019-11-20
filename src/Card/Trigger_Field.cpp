@@ -1,13 +1,12 @@
-#include "Deck.h"
+#include "Trigger_Field.h"
 
 // Constructors/Destructors
 //  
 
-Deck::Deck () {
-initAttributes();
+Trigger_Field::Trigger_Field () {
 }
 
-Deck::~Deck () { }
+Trigger_Field::~Trigger_Field () { }
 
 //  
 // Methods
@@ -21,6 +20,4 @@ Deck::~Deck () { }
 // Other methods
 //  
 
-void Deck::initAttributes () {
-}
 

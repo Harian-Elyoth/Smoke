@@ -1,13 +1,12 @@
-#include "Deck.h"
+#include "Trigger_Creature.h"
 
 // Constructors/Destructors
 //  
 
-Deck::Deck () {
-initAttributes();
+Trigger_Creature::Trigger_Creature () {
 }
 
-Deck::~Deck () { }
+Trigger_Creature::~Trigger_Creature () { }
 
 //  
 // Methods
@@ -21,6 +20,4 @@ Deck::~Deck () { }
 // Other methods
 //  
 
-void Deck::initAttributes () {
-}
 

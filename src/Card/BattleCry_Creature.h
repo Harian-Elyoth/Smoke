@@ -1,19 +1,16 @@
 
-#ifndef FIELD_H
-#define FIELD_H
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
-#include "Card.h"
+#ifndef BATTLECRY_CREATURE_H
+#define BATTLECRY_CREATURE_H
+#include "Creature.h"
 
 #include <string>
 
 /**
-  * class Field
+  * class BattleCry_Creature
   * 
   */
 
-class Field : virtual public Card, virtual public Card, virtual public Card, virtual public Card
+class BattleCry_Creature : public Creature
 {
 public:
 
@@ -24,12 +21,12 @@ public:
 		/**
 		 * Empty Constructor
 		 */
-		Field ();
+		BattleCry_Creature ();
 
 		/**
 		 * Empty Destructor
 		 */
-		virtual ~Field ();
+		virtual ~BattleCry_Creature ();
 
 		// Static Public attributes
 		//  
@@ -91,7 +88,6 @@ private:
 		// Static Private attributes
 		//  
 
-		static std::string type;
 		// Private attributes
 		//  
 
@@ -101,22 +97,6 @@ public:
 		// Private attribute accessor methods
 		//  
 
-
-		/**
-		 * Set the value of type
-		 * @param new_var the new value of type
-		 */
-		void setType (std::string new_var)		 {
-						Field::type = new_var;
-		}
-
-		/**
-		 * Get the value of type
-		 * @return the value of type
-		 */
-		std::string getType ()		 {
-				return Field::type;
-		}
 private:
 
 public:
@@ -128,8 +108,7 @@ public:
 private:
 
 
-		void initAttributes () ;
 
 };
 
-#endif // FIELD_H
+#endif // BATTLECRY_CREATURE_H

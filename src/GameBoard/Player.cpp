@@ -18,6 +18,9 @@ Player::~Player () { }
 //  
 
 
+// Other methods
+//  
+
 void Player::initAttributes () {
 }
 

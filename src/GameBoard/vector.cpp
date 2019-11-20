@@ -1,13 +1,12 @@
-#include "Deck.h"
+#include "vector.h"
 
 // Constructors/Destructors
 //  
 
-Deck::Deck () {
-initAttributes();
+vector::vector () {
 }
 
-Deck::~Deck () { }
+vector::~vector () { }
 
 //  
 // Methods
@@ -21,6 +20,4 @@ Deck::~Deck () { }
 // Other methods
 //  
 
-void Deck::initAttributes () {
-}
 

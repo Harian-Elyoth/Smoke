@@ -1,13 +1,12 @@
-#include "Deck.h"
+#include "Hand.h"
 
 // Constructors/Destructors
 //  
 
-Deck::Deck () {
-initAttributes();
+Hand::Hand () {
 }
 
-Deck::~Deck () { }
+Hand::~Hand () { }
 
 //  
 // Methods
@@ -21,6 +20,4 @@ Deck::~Deck () { }
 // Other methods
 //  
 
-void Deck::initAttributes () {
-}
 

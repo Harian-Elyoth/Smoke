@@ -2,9 +2,17 @@
 #ifndef SPELL_H
 #define SPELL_H
 #include "Card.h"
+#include "Card.h"
+#include "Card.h"
 
 #include <string>
-class Spell : virtual public Card
+
+/**
+  * class Spell
+  * 
+  */
+
+class Spell : virtual public Card, virtual public Card, virtual public Card
 {
 public:
 
@@ -22,14 +30,57 @@ public:
 		 */
 		virtual ~Spell ();
 
+		// Static Public attributes
+		//  
+
+		// Public attributes
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+		// Public attribute accessor methods
+		//  
+
+
+
+		/**
+		 */
+		void effect ()
+		{
+		}
+
+
+		/**
+		 * @return std::string
+		 */
+		std::string toString ()
+		{
+		}
+
+protected:
+
+		// Static Protected attributes
+		//  
+
+		// Protected attributes
+		//  
+
+public:
+
+
+		// Protected attribute accessor methods
+		//  
 
 protected:
 
 public:
 
-protected:
 
-public:
+		// Protected attribute accessor methods
+		//  
 
 protected:
 
@@ -40,6 +91,9 @@ private:
 		//  
 
 		static std::string type;
+		// Private attributes
+		//  
+
 public:
 
 
@@ -65,6 +119,10 @@ public:
 private:
 
 public:
+
+
+		// Private attribute accessor methods
+		//  
 
 private:
 

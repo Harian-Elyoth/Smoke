@@ -18,6 +18,9 @@ Artefact::~Artefact () { }
 //  
 
 
+// Other methods
+//  
+
 void Artefact::initAttributes () {
 		type = "Artefact";
 }

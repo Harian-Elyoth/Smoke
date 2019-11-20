@@ -1,13 +1,12 @@
-#include "Deck.h"
+#include "Graveyard.h"
 
 // Constructors/Destructors
 //  
 
-Deck::Deck () {
-initAttributes();
+Graveyard::Graveyard () {
 }
 
-Deck::~Deck () { }
+Graveyard::~Graveyard () { }
 
 //  
 // Methods
@@ -21,6 +20,4 @@ Deck::~Deck () { }
 // Other methods
 //  
 
-void Deck::initAttributes () {
-}
 

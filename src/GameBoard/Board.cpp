@@ -18,6 +18,9 @@ Board::~Board () { }
 //  
 
 
+// Other methods
+//  
+
 void Board::initAttributes () {
 }
 

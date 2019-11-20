@@ -1,0 +1,70 @@
+Cost 0 :
+
+    Dust Digger :
+        Stat : 1/1
+        Effect : Generate as much smoke as creature in your graveyard.
+
+    Dust Crawler : 
+        Stat 2/1
+        Effect : if you have more than 4 creatures in your graveyard, this card can't be blocked.
+
+    Dust Maker : 
+        Stat : 1/2
+        Effect : Summon a two or less cost Dust Creature from your hand to the battlefield.
+
+Cost 1 :
+
+    Dust Gunner : 
+        Stat : 3/2
+        Effect : When the Dust Gunner enter into the battlefield each player discard 5 card from the deck to the graveyard.
+
+    Dust SwordMan :
+        Stat : 2/2
+        Effect : When the SwordMan enter into the battlefield, inflict two damage to a creature, if you have more than 4 creature in your graveyard, 
+        inflict 5 instead.
+
+    Dust DarkPriest :
+        Stat : 1/1
+        Effect : Once per turn, you can sacrifice 1 Dust creature on your battlefield to inflict 5 damage to any entity in the game (player of cards),
+        If you have more than 5 creatures in your graveyard heals you for 5.
+
+Cost 2 :
+
+    Dust Warwolf :
+        Stat : 3/2 
+        Effect : Each time Warwolf attack, each player discard 3 card from the deck to the graveyard.
+
+
+Cost 3 :
+
+    Dust Sniper :
+        Stat : 3/3
+        Effect : When the Dust Sniper enters into the battlefield, destroy one card.
+
+    Dust Soldier : 
+        Stat : 4/3 
+        Effect : When a Dust Creature dies on your battlefield, each player discard one card.
+
+Cost 4 :
+
+    Dust Bruiser :
+        Stat : 5/4 
+        Effect : When the Dust Bruiser enters into the battlefield, target an ennemy, inflict as much damage as creature in your graveyard.
+
+Cost 5 :
+
+    Dust Runner :
+        Stat : 3/4
+        Effect : can attack directly your opponent.
+    
+    Dust Witcher :
+        Stat : 2/2 
+        Effect : Each time an ennemy creature dies, Dust Witcher can summon a creature from your graveyard to your battlefield, Your opponent have to have 
+        2 creature or more to apply this effect.
+
+Cost 8 : 
+
+    Dust Master :
+        Stat : 0/1
+        Effect : Each time a Dust Creature go to the graveyard, Dust Master has +2/+1
+

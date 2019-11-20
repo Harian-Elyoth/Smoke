@@ -18,6 +18,9 @@ Creature::~Creature () { }
 //  
 
 
+// Other methods
+//  
+
 void Creature::initAttributes () {
 		type = "Creature";
 		AttackFlag = 0;
