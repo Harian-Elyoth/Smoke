@@ -1,114 +1,40 @@
 
 #ifndef CARDLIST_H
 #define CARDLIST_H
-#include "Deck.h"
-#include "Hand.h"
-#include "Graveyard.h"
-#include "Battleground.h"
+#pragma once
 
 #include "Card.h"
 
+#include <sstream>
 #include <string>
 #include <vector>
 
-
-
-/**
-  * class CardList
-  * 
-  */
-
-class CardList : public Deck, public Hand, public Graveyard, public Battleground
+class CardList
 {
 public:
 
-		// Constructors/Destructors
-		//  
-
-
-		/**
-		 * Empty Constructor
-		 */
-		CardList ();
-
-		/**
-		 * Empty Destructor
-		 */
 		virtual ~CardList ();
 
-		// Static Public attributes
-		//  
+		void add (Card *card);
 
-		// Public attributes
-		//  
+		void add (std::vector<Card> &cL);
 
+		virtual void show () = 0;
 
-		// Public attribute accessor methods
-		//  
+		void setCList (std::vector<Card> &new_var){cList = new_var;}
 
+		std::vector<Card> &getCList (){return cList;}
 
-		// Public attribute accessor methods
-		//  
-
-
-
-		/**
-		 * @param  card
-		 */
-		void add (Card* card)
-		{
-		}
-
-
-		/**
-		 * @param  cList
-		 */
-		void add (vector<Card*> cList)
-		{
-		}
-
-
-		/**
-		 */
-		void add (vector<Card*> cList)
-		{
-		}
-
+		friend class Deck;
+		friend class Graveyard;
+		friend class Hand;
+		friend class Board;
 
 private:
 
-		// Static Private attributes
-		//  
+		std::vector<Card> cList;
 
-		// Private attributes
-		//  
-
-		int length;
-public:
-
-private:
-
-
-		// Private attribute accessor methods
-		//  
-
-		/**
-		 * Set the value of cList
-		 * @param new_var the new value of cList
-		 */
-		void setCList (vector<Card*> new_var)		 {
-						cList = new_var;
-		}
-
-		/**
-		 * Get the value of cList
-		 * @return the value of cList
-		 */
-		vector<Card*> getCList ()		 {
-				return cList;
-		}
-
-		void initAttributes () ;
+		virtual void initAttributes () = 0;
 
 };
 

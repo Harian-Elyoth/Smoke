@@ -1,261 +1,86 @@
 
 #ifndef PLAYER_H
 #define PLAYER_H
+#pragma once
+
+#include "Battleground.h"
+#include "Deck.h"
+#include "Card.h"
 
 #include <string>
 
-/**
-  * class Player
-  * 
-  */
+class Card;
 
 class Player
 {
 public:
 
-		// Constructors/Destructors
-		//  
-
-
-		/**
-		 * Empty Constructor
-		 */
 		Player ();
 
-		/**
-		 * Empty Destructor
-		 */
+		Player(std::string n, Deck &d, std::string h);
+
+		Player(std::string n, std::string h);
+
 		virtual ~Player ();
 
-		// Static Public attributes
-		//  
+		void play (Card* card){}
 
-		// Public attributes
-		//  
+		void setId(int new_var){id = new_var;}
 
+		int getId(){return id;}
 
-		// Public attribute accessor methods
-		//  
+		void setName (std::string new_var){name = new_var;}
 
+		std::string getName () const{return name;}
 
-		// Public attribute accessor methods
-		//  
+		void setSmoke (int new_var){smoke = new_var;}
 
+		int getSmoke (){return smoke;}
 
+		// void setHand (Hand new_var){hand = new_var;}
 
-		/**
-		 * @param  card
-		 */
-		void play (Card* card)
-		{
-		}
+		// Hand getHand (){return hand;}
 
-protected:
+		// void setGraveyard (Graveyard new_var){graveyard = new_var;}
 
-		// Static Protected attributes
-		//  
+		// Graveyard getGraveyard (){return graveyard;}
 
-		// Protected attributes
-		//  
+		void setDeck (Deck new_var){deck = new_var;}
 
-public:
+		Deck* getDeck () {return &deck;}
 
+		// void setBattleground (Battleground new_var){battleground = new_var;}
 
-		// Protected attribute accessor methods
-		//  
+		// Battleground getBattleground (){return battleground;}
 
-protected:
+		void setHero (std::string new_var){hero = new_var;}
+		
+		std::string getHero (){return hero;}
+		
+		void setNormalSummon (bool new_var)	{normalSummon = new_var;}
+		
+		bool getNormalSummon ()	{return normalSummon;}
+		
+		void setFullBoard (bool new_var) {fullBoard = new_var;}
+		
+		bool getFullBoard () {return fullBoard;}
 
-public:
+		Player operator=(const Player& P);
 
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
+		friend std::ostream& operator<<(std::ostream& os, Player& P);
 
 private:
 
-		// Static Private attributes
-		//  
-
-		// Private attributes
-		//  
-
-		// 		
+		static int id;
 		std::string name;
 		int smoke;
-		Hand hand;
-		Graveyard graveyard;
+		// Hand hand;
+		// Graveyard graveyard;
 		Deck deck;
-		Battleground battleground;
+		// Battleground battleground;
 		std::string hero;
 		bool normalSummon;
 		bool fullBoard;
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-
-		/**
-		 * Set the value of name
-		 * 
-		 * @param new_var the new value of name
-		 */
-		void setName (std::string new_var)		 {
-						name = new_var;
-		}
-
-		/**
-		 * Get the value of name
-		 * 
-		 * @return the value of name
-		 */
-		std::string getName ()		 {
-				return name;
-		}
-
-		/**
-		 * Set the value of smoke
-		 * @param new_var the new value of smoke
-		 */
-		void setSmoke (int new_var)		 {
-						smoke = new_var;
-		}
-
-		/**
-		 * Get the value of smoke
-		 * @return the value of smoke
-		 */
-		int getSmoke ()		 {
-				return smoke;
-		}
-
-		/**
-		 * Set the value of hand
-		 * @param new_var the new value of hand
-		 */
-		void setHand (Hand new_var)		 {
-						hand = new_var;
-		}
-
-		/**
-		 * Get the value of hand
-		 * @return the value of hand
-		 */
-		Hand getHand ()		 {
-				return hand;
-		}
-
-		/**
-		 * Set the value of graveyard
-		 * @param new_var the new value of graveyard
-		 */
-		void setGraveyard (Graveyard new_var)		 {
-						graveyard = new_var;
-		}
-
-		/**
-		 * Get the value of graveyard
-		 * @return the value of graveyard
-		 */
-		Graveyard getGraveyard ()		 {
-				return graveyard;
-		}
-
-		/**
-		 * Set the value of deck
-		 * @param new_var the new value of deck
-		 */
-		void setDeck (Deck new_var)		 {
-						deck = new_var;
-		}
-
-		/**
-		 * Get the value of deck
-		 * @return the value of deck
-		 */
-		Deck getDeck ()		 {
-				return deck;
-		}
-
-		/**
-		 * Set the value of battleground
-		 * @param new_var the new value of battleground
-		 */
-		void setBattleground (Battleground new_var)		 {
-						battleground = new_var;
-		}
-
-		/**
-		 * Get the value of battleground
-		 * @return the value of battleground
-		 */
-		Battleground getBattleground ()		 {
-				return battleground;
-		}
-
-		/**
-		 * Set the value of hero
-		 * @param new_var the new value of hero
-		 */
-		void setHero (std::string new_var)		 {
-						hero = new_var;
-		}
-
-		/**
-		 * Get the value of hero
-		 * @return the value of hero
-		 */
-		std::string getHero ()		 {
-				return hero;
-		}
-
-		/**
-		 * Set the value of normalSummon
-		 * @param new_var the new value of normalSummon
-		 */
-		void setNormalSummon (bool new_var)		 {
-						normalSummon = new_var;
-		}
-
-		/**
-		 * Get the value of normalSummon
-		 * @return the value of normalSummon
-		 */
-		bool getNormalSummon ()		 {
-				return normalSummon;
-		}
-
-		/**
-		 * Set the value of fullBoard
-		 * @param new_var the new value of fullBoard
-		 */
-		void setFullBoard (bool new_var)		 {
-						fullBoard = new_var;
-		}
-
-		/**
-		 * Get the value of fullBoard
-		 * @return the value of fullBoard
-		 */
-		bool getFullBoard ()		 {
-				return fullBoard;
-		}
-private:
-
-
 		void initAttributes () ;
 
 };

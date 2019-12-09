@@ -1,181 +1,37 @@
 
 #ifndef DECK_H
 #define DECK_H
+#pragma once
+
 #include "CardList.h"
+#include "Card.h"
 
 #include <string>
-
-/**
-  * class Deck
-  * 
-  */
+#include <vector>
 
 class Deck : public CardList
 {
 public:
 
-		// Constructors/Destructors
-		//  
-
-
-		/**
-		 * Empty Constructor
-		 */
 		Deck ();
 
-		/**
-		 * Empty Destructor
-		 */
 		virtual ~Deck ();
 
-		// Static Public attributes
-		//  
+		std::vector<Card> getCList() const{return this->cList;}
 
-		// Public attributes
-		//  
+		void show (){}
 
+		Card* draw ();
 
-		// Public attribute accessor methods
-		//  
+		Card* drawCost (int cost);
 
+		Card* drawName (std::string name);
 
-		// Public attribute accessor methods
-		//  
+		Card* drawTribe (std::string tribe);
 
+		friend std::ostream& operator<<(std::ostream& os, const Deck& d);
 
-
-		/**
-		 */
-		void show ()
-		{
-		}
-
-
-		/**
-		 * @param  card
-		 */
-		void burn (Card* card)
-		{
-		}
-
-
-		/**
-		 * @return Card*
-		 */
-		Card* draw ()
-		{
-		}
-
-
-		/**
-		 * @return Card*
-		 * @param  cost
-		 */
-		Card* drawCost (int cost)
-		{
-		}
-
-
-		/**
-		 * @return Card*
-		 * @param  name
-		 */
-		Card* drawName (std::string name)
-		{
-		}
-
-
-		/**
-		 * @return Card*
-		 * @param  tribe
-		 */
-		Card* drawTribe (std::string tribe)
-		{
-		}
-
-protected:
-
-		// Static Protected attributes
-		//  
-
-		// Protected attributes
-		//  
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-
-private:
-
-		// Static Private attributes
-		//  
-
-		// Private attributes
-		//  
-
-		std::string tribe1;
-		std::string tribe2;
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-
-		/**
-		 * Set the value of tribe1
-		 * @param new_var the new value of tribe1
-		 */
-		void setTribe1 (std::string new_var)		 {
-						tribe1 = new_var;
-		}
-
-		/**
-		 * Get the value of tribe1
-		 * @return the value of tribe1
-		 */
-		std::string getTribe1 ()		 {
-				return tribe1;
-		}
-
-		/**
-		 * Set the value of tribe2
-		 * @param new_var the new value of tribe2
-		 */
-		void setTribe2 (std::string new_var)		 {
-						tribe2 = new_var;
-		}
-
-		/**
-		 * Get the value of tribe2
-		 * @return the value of tribe2
-		 */
-		std::string getTribe2 ()		 {
-				return tribe2;
-		}
-private:
-
+private :
 
 		void initAttributes () ;
 
