@@ -1,17 +1,24 @@
 
 #ifndef DECK_H
 #define DECK_H
+#pragma once
+
 #include "CardList.h"
+#include "Card.h"
 
 #include <string>
 #include <vector>
+<<<<<<< HEAD
 #include <algorithm>
 #include <random>
+=======
+>>>>>>> BoardBranch
 
 class Deck : public CardList
 {
 public:
 
+<<<<<<< HEAD
 		// Constructors/Destructors
 		//  
 
@@ -20,13 +27,13 @@ public:
 		/**
 		 * Empty Constructor
 		 */
+=======
+>>>>>>> BoardBranch
 		Deck ();
 
-		/**
-		 * Empty Destructor
-		 */
 		virtual ~Deck ();
 
+<<<<<<< HEAD
 		// Static Public attributes
 		//  
 
@@ -47,6 +54,11 @@ public:
 		void shuffle();
 
 		Card* burn ();
+=======
+		std::vector<Card> getCList() const{return this->cList;}
+
+		void show (){}
+>>>>>>> BoardBranch
 
 		Card* draw ();
 
@@ -54,6 +66,7 @@ public:
 
 		Card* drawName (std::string name);
 
+<<<<<<< HEAD
 		Card* drawCreature ();
 
 		Card* drawArtefact ();
@@ -64,6 +77,14 @@ public:
 	
 private:
 
+=======
+		Card* drawTribe (std::string tribe);
+
+		friend std::ostream& operator<<(std::ostream& os, const Deck& d);
+
+private :
+
+>>>>>>> BoardBranch
 		void initAttributes () ;
 
 };
