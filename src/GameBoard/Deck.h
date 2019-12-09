@@ -1,33 +1,39 @@
 
 #ifndef DECK_H
 #define DECK_H
+#pragma once
+
 #include "CardList.h"
+#include "Card.h"
 
 #include <string>
-
-/**
-  * class Deck
-  * 
-  */
+#include <vector>
+<<<<<<< HEAD
+#include <algorithm>
+#include <random>
+=======
+>>>>>>> BoardBranch
 
 class Deck : public CardList
 {
 public:
 
+<<<<<<< HEAD
 		// Constructors/Destructors
 		//  
 
+		Deck(std::vector<Card*> cL);
 
 		/**
 		 * Empty Constructor
 		 */
+=======
+>>>>>>> BoardBranch
 		Deck ();
 
-		/**
-		 * Empty Destructor
-		 */
 		virtual ~Deck ();
 
+<<<<<<< HEAD
 		// Static Public attributes
 		//  
 
@@ -43,140 +49,42 @@ public:
 		//  
 
 
+		void show ();
 
-		/**
-		 */
-		void show ()
-		{
-		}
+		void shuffle();
 
+		Card* burn ();
+=======
+		std::vector<Card> getCList() const{return this->cList;}
 
-		/**
-		 * @param  card
-		 */
-		void burn (Card* card)
-		{
-		}
+		void show (){}
+>>>>>>> BoardBranch
 
+		Card* draw ();
 
-		/**
-		 * @return Card*
-		 */
-		Card* draw ()
-		{
-		}
+		Card* drawCost (int cost);
 
+		Card* drawName (std::string name);
 
-		/**
-		 * @return Card*
-		 * @param  cost
-		 */
-		Card* drawCost (int cost)
-		{
-		}
+<<<<<<< HEAD
+		Card* drawCreature ();
 
+		Card* drawArtefact ();
 
-		/**
-		 * @return Card*
-		 * @param  name
-		 */
-		Card* drawName (std::string name)
-		{
-		}
+		Card* drawField ();
 
-
-		/**
-		 * @return Card*
-		 * @param  tribe
-		 */
-		Card* drawTribe (std::string tribe)
-		{
-		}
-
-protected:
-
-		// Static Protected attributes
-		//  
-
-		// Protected attributes
-		//  
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-
+		Card* drawSpell ();
+	
 private:
 
-		// Static Private attributes
-		//  
+=======
+		Card* drawTribe (std::string tribe);
 
-		// Private attributes
-		//  
+		friend std::ostream& operator<<(std::ostream& os, const Deck& d);
 
-		std::string tribe1;
-		std::string tribe2;
-public:
+private :
 
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-
-		/**
-		 * Set the value of tribe1
-		 * @param new_var the new value of tribe1
-		 */
-		void setTribe1 (std::string new_var)		 {
-						tribe1 = new_var;
-		}
-
-		/**
-		 * Get the value of tribe1
-		 * @return the value of tribe1
-		 */
-		std::string getTribe1 ()		 {
-				return tribe1;
-		}
-
-		/**
-		 * Set the value of tribe2
-		 * @param new_var the new value of tribe2
-		 */
-		void setTribe2 (std::string new_var)		 {
-						tribe2 = new_var;
-		}
-
-		/**
-		 * Get the value of tribe2
-		 * @return the value of tribe2
-		 */
-		std::string getTribe2 ()		 {
-				return tribe2;
-		}
-private:
-
-
+>>>>>>> BoardBranch
 		void initAttributes () ;
 
 };

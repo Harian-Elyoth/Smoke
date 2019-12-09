@@ -1,26 +1,31 @@
 #include "Board.h"
 
-// Constructors/Destructors
-//  
-
 Board::Board () {
-initAttributes();
+    initAttributes();
 }
 
-Board::~Board () { }
+Board::~Board () {
+    delete[] activeP;
+}
 
-//  
-// Methods
-//  
+void Board::passTurn(){
+    if(activeP == &P1) activeP = &P2;
+    else if(activeP == &P2) activeP = &P1;
+    else activeP = &P1;
+}
 
-
-// Accessor methods
-//  
-
-
-// Other methods
-//  
+void Board::timerReset(){
+    timeTurn = time(NULL);
+    timeStartTurn = timeTurn;
+}
 
 void Board::initAttributes () {
+    Player P;
+    P1 = P;
+    P2 = P;
+    activeP = &P1;
+    timeTurn = time(NULL);
+    timeStartTurn = timeTurn;
+    turn = 0;
 }
 

@@ -11,7 +11,7 @@
   * 
   */
 
-class Graveyard : public CardList, public CardList
+class Graveyard : public CardList
 {
 public:
 
