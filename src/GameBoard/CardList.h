@@ -1,7 +1,11 @@
 
 #ifndef CARDLIST_H
 #define CARDLIST_H
+<<<<<<< HEAD
+#include "Card.h"
+=======
 #pragma once
+>>>>>>> BoardBranch
 
 #include "Card.h"
 
