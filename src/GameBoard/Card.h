@@ -46,6 +46,10 @@ public:
 
 		friend std::ostream& operator<<(std::ostream& os, const Card& c);
 
+		bool operator!=(const Card& c);
+
+		bool operator==(const Card& c);
+
 private:
 
 		int cost;

@@ -9,8 +9,6 @@
 
 #include "Card.h"
 #include "CardList.h"
-#include "Deck.h"
-#include "Battleground.h"
 #include "Player.h"
 #include "Board.h"
 

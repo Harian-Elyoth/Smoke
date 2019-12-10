@@ -4,9 +4,7 @@ Board::Board () {
     initAttributes();
 }
 
-Board::~Board () {
-    delete[] activeP;
-}
+Board::~Board () { }
 
 void Board::passTurn(){
     if(activeP == &P1) activeP = &P2;
@@ -19,10 +17,12 @@ void Board::timerReset(){
     timeStartTurn = timeTurn;
 }
 
+std::ostream& operator<<(std::ostream& os, Board& b){
+    os << *(b.getP1()) << *(b.getP2()) << std::endl;
+    return os;
+}
+
 void Board::initAttributes () {
-    Player P;
-    P1 = P;
-    P2 = P;
     activeP = &P1;
     timeTurn = time(NULL);
     timeStartTurn = timeTurn;

@@ -3,8 +3,7 @@
 #define PLAYER_H
 #pragma once
 
-#include "Battleground.h"
-#include "Deck.h"
+#include "CardList.h"
 #include "Card.h"
 
 #include <string>
@@ -15,15 +14,21 @@ class Player
 {
 public:
 
+		/////////////////////////////////////
+		//  Constructeurs et Destructeur  ///
+		/////////////////////////////////////
+
 		Player ();
 
-		Player(std::string n, Deck &d, std::string h);
+		Player(std::string n, CardList &d, std::string h);
 
 		Player(std::string n, std::string h);
 
 		virtual ~Player ();
 
-		void play (Card* card){}
+		////////////////////////////
+		//  Setters et guetters  ///
+		////////////////////////////
 
 		void setId(int new_var){id = new_var;}
 
@@ -37,21 +42,21 @@ public:
 
 		int getSmoke (){return smoke;}
 
-		// void setHand (Hand new_var){hand = new_var;}
+		void setHand (CardList new_var){hand = new_var;}
 
-		// Hand getHand (){return hand;}
+		CardList* getHand (){return &hand;}
 
-		// void setGraveyard (Graveyard new_var){graveyard = new_var;}
+		void setGraveyard (CardList new_var){graveyard = new_var;}
 
-		// Graveyard getGraveyard (){return graveyard;}
+		CardList* getGraveyard (){return &graveyard;}
 
-		void setDeck (Deck new_var){deck = new_var;}
+		void setDeck (CardList new_var){deck = new_var;}
 
-		Deck* getDeck () {return &deck;}
+		CardList* getDeck () {return &deck;}
 
-		// void setBattleground (Battleground new_var){battleground = new_var;}
+		void setBattleground (CardList new_var){battleground = new_var;}
 
-		// Battleground getBattleground (){return battleground;}
+		CardList* getBattleground (){return &battleground;}
 
 		void setHero (std::string new_var){hero = new_var;}
 		
@@ -65,23 +70,39 @@ public:
 		
 		bool getFullBoard () {return fullBoard;}
 
-		Player operator=(const Player& P);
+		/////////////////////////
+		//  Autres fonctions  ///
+		/////////////////////////
+
+		Card play(Card& card);
+
+		Card emptyDeck();
+
+		Card draw();
+
+		Card drawCost(int cost);
+
+		Card discard();
+
+		Card burn();
 
 		friend std::ostream& operator<<(std::ostream& os, Player& P);
+
+		void operator=(Player& P);
 
 private:
 
 		static int id;
 		std::string name;
 		int smoke;
-		// Hand hand;
-		// Graveyard graveyard;
-		Deck deck;
-		// Battleground battleground;
+		CardList hand;
+		CardList graveyard;
+		CardList deck;
+		CardList battleground;
 		std::string hero;
 		bool normalSummon;
 		bool fullBoard;
-		void initAttributes () ;
+		void initAttributes ();
 
 };
 

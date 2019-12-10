@@ -17,14 +17,15 @@ public:
 		void options ();
 		void passTurn ();
 		void timerReset ();
-		void setP1 (Player new_var) {P1 = new_var;}
-		Player getP1 ()	{return P1;}
-		void setP2 (Player new_var)	{P2 = new_var;}
-		Player getP2 ()	{return P2;}
+		void setP1 (Player& new_var) {P1 = new_var;}
+		Player* getP1 ()	{return &P1;}
+		void setP2 (Player& new_var)	{P2 = new_var;}
+		Player* getP2 ()	{return &P2;}
 		void setTimeTurn (time_t new_var) {timeTurn = new_var;}
 		time_t getTimeTurn () {return timeTurn;}
 		void setTurn (int new_var)	{turn = new_var;}
 		int getTurn () {return turn;}
+		friend std::ostream& operator<<(std::ostream& os, Board& b);
 
 private:
 
@@ -35,8 +36,8 @@ private:
 		time_t timeStartTurn;
 		int turn;
 
-		void resetTurnTimer ();
-		void nextTurn ();
+		void resetTurnTimer (){}
+		void nextTurn (){}
 		void initAttributes ();
 
 };

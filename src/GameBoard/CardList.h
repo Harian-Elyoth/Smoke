@@ -13,28 +13,41 @@ class CardList
 {
 public:
 
+		CardList();
+
 		virtual ~CardList ();
 
-		void add (Card *card);
+		void add (Card& card);
 
 		void add (std::vector<Card> &cL);
 
-		virtual void show () = 0;
+		void erase(std::vector<Card>::iterator it);
+
+		Card& front();
+
+		std::vector<Card>::iterator begin();
+
+		std::vector<Card>::iterator end();
+
+		bool isEmpty();
+
+		size_t size();
+
+		void show ();
 
 		void setCList (std::vector<Card> &new_var){cList = new_var;}
 
 		std::vector<Card> &getCList (){return cList;}
 
-		friend class Deck;
-		friend class Graveyard;
-		friend class Hand;
-		friend class Board;
+		friend std::ostream& operator<<(std::ostream& os, CardList& cL);
+
+		void operator=(CardList& cL);
 
 private:
 
 		std::vector<Card> cList;
 
-		virtual void initAttributes () = 0;
+		void initAttributes ();
 
 };
 
