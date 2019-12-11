@@ -8,15 +8,20 @@
 
 #include <string>
 
+#define SMOKE_WIN_CONDITION 250
+#define SMOKE_LOOSE_CONDITION 0
+#define SMOKE_START 100
+#define SMOKE_GAIN_ON_TURN 10
+
 class Card;
 
 class Player
 {
 public:
 
-		/////////////////////////////////////
-		//  Constructeurs et Destructeur  ///
-		/////////////////////////////////////
+		//////////////////////////////////
+		//  Constructors et Destructor  //
+		//////////////////////////////////
 
 		Player ();
 
@@ -27,7 +32,7 @@ public:
 		virtual ~Player ();
 
 		////////////////////////////
-		//  Setters et guetters  ///
+		//  Setters and guetters  //
 		////////////////////////////
 
 		void setId(int new_var){id = new_var;}
@@ -70,13 +75,15 @@ public:
 		
 		bool getFullBoard () {return fullBoard;}
 
-		/////////////////////////
-		//  Autres fonctions  ///
-		/////////////////////////
+		///////////////////////
+		//  Other fonctions  //
+		///////////////////////
+
+		bool winConditionVerif();
+
+		bool looseConditionVerif();
 
 		Card play(Card& card);
-
-		Card emptyDeck();
 
 		Card draw();
 
@@ -85,6 +92,12 @@ public:
 		Card discard();
 
 		Card burn();
+
+		Card destroy(Card& card);
+
+		Card exile(Card& card, CardList& zone);
+
+		// Card activate(Card c);
 
 		friend std::ostream& operator<<(std::ostream& os, Player& P);
 
@@ -102,7 +115,13 @@ private:
 		std::string hero;
 		bool normalSummon;
 		bool fullBoard;
+		bool win;
+
 		void initAttributes ();
+
+		bool cardExists(CardList& cL, Card& card);
+
+		std::vector<Card>::iterator cardToIterator(CardList& cL, Card& card);
 
 };
 

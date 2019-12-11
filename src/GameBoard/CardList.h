@@ -1,11 +1,7 @@
 
 #ifndef CARDLIST_H
 #define CARDLIST_H
-<<<<<<< HEAD
-#include "Card.h"
-=======
 #pragma once
->>>>>>> BoardBranch
 
 #include "Card.h"
 
@@ -17,9 +13,25 @@ class CardList
 {
 public:
 
+		//////////////////////////////////
+		//  Constructors et Destructor  //
+		//////////////////////////////////
+
 		CardList();
 
 		virtual ~CardList ();
+
+		////////////////////////////
+		//  Setters and guetters  //
+		////////////////////////////
+
+		void setCList (std::vector<Card> &new_var){cList = new_var;}
+
+		std::vector<Card> &getCList (){return cList;}
+
+		///////////////////////
+		//  Other fonctions  //
+		///////////////////////
 
 		void add (Card& card);
 
@@ -38,10 +50,6 @@ public:
 		size_t size();
 
 		void show ();
-
-		void setCList (std::vector<Card> &new_var){cList = new_var;}
-
-		std::vector<Card> &getCList (){return cList;}
 
 		friend std::ostream& operator<<(std::ostream& os, CardList& cL);
 

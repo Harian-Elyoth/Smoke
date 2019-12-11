@@ -11,5 +11,6 @@
 #include "CardList.h"
 #include "Player.h"
 #include "Board.h"
+#include "Game.h"
 
 #endif // SMOKE_H
