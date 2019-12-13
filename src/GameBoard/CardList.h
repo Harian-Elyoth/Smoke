@@ -1,11 +1,7 @@
 
 #ifndef CARDLIST_H
 #define CARDLIST_H
-<<<<<<< HEAD
-#include "Card.h"
-=======
 #pragma once
->>>>>>> BoardBranch
 
 #include "Card.h"
 
@@ -17,55 +13,53 @@ class CardList
 {
 public:
 
-<<<<<<< HEAD
-		/**
-		 * Empty Destructor
-		 */
+		//////////////////////////////////
+		//  Constructors et Destructor  //
+		//////////////////////////////////
+
+		CardList();
+
 		virtual ~CardList ();
 
-		void add (Card* card);
-
-		void add (std::vector<Card*> cL);
-
-		virtual void show ();
-
-		void setCList (std::vector<Card*> new_var){cList = new_var;}
-
-		std::vector<Card*> getCList (){return cList;}
-
-protected:
-
-		// Protected attributes
-		//  
-		std::vector<Card*> cList;
-
-private:
-
-		void initAttributes () ;
-=======
-		virtual ~CardList ();
-
-		void add (Card *card);
-
-		void add (std::vector<Card> &cL);
-
-		virtual void show () = 0;
+		////////////////////////////
+		//  Setters and guetters  //
+		////////////////////////////
 
 		void setCList (std::vector<Card> &new_var){cList = new_var;}
 
 		std::vector<Card> &getCList (){return cList;}
 
-		friend class Deck;
-		friend class Graveyard;
-		friend class Hand;
-		friend class Board;
+		///////////////////////
+		//  Other fonctions  //
+		///////////////////////
+
+		void add (Card& card);
+
+		void add (std::vector<Card> &cL);
+
+		void erase(std::vector<Card>::iterator it);
+
+		Card& front();
+
+		std::vector<Card>::iterator begin();
+
+		std::vector<Card>::iterator end();
+
+		bool isEmpty();
+
+		size_t size();
+
+		void show ();
+
+		friend std::ostream& operator<<(std::ostream& os, CardList& cL);
+
+		void operator=(CardList& cL);
 
 private:
 
 		std::vector<Card> cList;
 
-		virtual void initAttributes () = 0;
->>>>>>> BoardBranch
+		void initAttributes ();
 
 };
 

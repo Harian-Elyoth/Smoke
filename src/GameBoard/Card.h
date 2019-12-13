@@ -11,6 +11,9 @@ class Card
 {
 public:
 
+		//////////////////////////////////
+		//  Constructors et Destructor  //
+		//////////////////////////////////
 		
 		Card ();
 
@@ -18,7 +21,9 @@ public:
 
 		virtual ~Card ();
 
-		virtual void effect () {}
+		////////////////////////////
+		//  Setters and guetters  //
+		////////////////////////////
 
 		void setCost (int new_var){cost = new_var;}
 
@@ -44,7 +49,15 @@ public:
 
 		// vector<Buff*> getBuffs (){return buffs;}
 
+		///////////////////////
+		//  Other fonctions  //
+		///////////////////////
+
 		friend std::ostream& operator<<(std::ostream& os, const Card& c);
+
+		bool operator!=(const Card& c);
+
+		bool operator==(const Card& c);
 
 private:
 
