@@ -1,6 +1,6 @@
 #include "Smoke.h"
 
-int main(){
+int main(int argc, char *argv[]){
 	// gameStart();
 	Board board;
 	Player P1((std::string)"Axel", (std::string)"Alucard");
@@ -20,6 +20,10 @@ int main(){
 	board.getP2()->exile(c3, *board.getP2()->getDeck());
 	board.getP1()->destroy(c1);
 	std::cout << board << std::endl;
-	return 0;
+
+    QApplication a(argc, argv);
+    SmokeWindow w;
+    w.show();
+    return a.exec();
 }
 

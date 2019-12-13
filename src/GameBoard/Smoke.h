@@ -12,5 +12,7 @@
 #include "Player.h"
 #include "Board.h"
 #include "Game.h"
+#include "smokewindow.h"
+#include <QApplication>
 
 #endif // SMOKE_H

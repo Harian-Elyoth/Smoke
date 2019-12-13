@@ -11,6 +11,7 @@ Card::~Card () { }
 
 std::ostream& operator<<(std::ostream& os, const Card& c){
     os << c.cost << " | " << c.name << std::endl;
+    return os;
 }
 
 bool Card::operator!=(const Card& c){
