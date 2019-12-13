@@ -2,8 +2,7 @@
 #ifndef CREATURE_H
 #define CREATURE_H
 #include "Card.h"
-#include "Card.h"
-#include "Card.h"
+
 
 #include <string>
 
@@ -12,38 +11,14 @@
   * 
   */
 
-class Creature : virtual public Card, virtual public Card, virtual public Card
+class Creature : virtual public Card
 {
 public:
 
-		// Constructors/Destructors
-		//  
 
-
-		/**
-		 * Empty Constructor
-		 */
 		Creature ();
 
-		/**
-		 * Empty Destructor
-		 */
 		virtual ~Creature ();
-
-		// Static Public attributes
-		//  
-
-		// Public attributes
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
 
 
 		/**
@@ -53,9 +28,6 @@ public:
 		}
 
 
-		/**
-		 * @return std::string
-		 */
 		std::string toString ()
 		{
 		}
@@ -85,7 +57,7 @@ public:
 protected:
 
 
-private:
+protected:
 
 		// Static Private attributes
 		//  
@@ -93,7 +65,7 @@ private:
 		static std::string type;
 		// Private attributes
 		//  
-
+		std::string race;
 		int strength;
 		int health;
 		int AttackFlag;

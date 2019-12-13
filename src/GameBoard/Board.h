@@ -12,6 +12,10 @@ class Board
 {
 public:
 
+		friend class Card;
+		friend class Player;
+		friend class CardList;
+		
 		//////////////////////////////////
 		//  Constructors et Destructor  //
 		//////////////////////////////////
