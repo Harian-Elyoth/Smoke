@@ -6,6 +6,8 @@
 
 #include <string>
 
+std::string CREATURE = "Creature";
+
 /**
   * class Creature
   * 
@@ -21,40 +23,10 @@ public:
 		virtual ~Creature ();
 
 
-		/**
-		 */
-		void effect ()
-		{
-		}
-
 
 		std::string toString ()
 		{
 		}
-
-protected:
-
-		// Static Protected attributes
-		//  
-
-		// Protected attributes
-		//  
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
 
 
 protected:
@@ -70,6 +42,7 @@ protected:
 		int health;
 		int AttackFlag;
 		int BlockFlag;
+
 public:
 
 

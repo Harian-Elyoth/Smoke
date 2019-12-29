@@ -14,8 +14,8 @@ public:
 		//////////////////////////////////
 		//  Constructors et Destructor  //
 		//////////////////////////////////
-		friend class Board;
 		
+
 		Card ();
 
 		Card(int c, std::string n, int id, std::string tr, std::string ty);
@@ -60,15 +60,14 @@ public:
 
 		bool operator==(const Card& c);
 
-private:
+protected:
 
 		int cost;
 		std::string name;
 		int owner;
 		std::string tribe;
 		std::string type;
-		// vector<Buff*> buffs;
-
+		int invinsibleFlag;
 		void initAttributes () ;
 
 };
