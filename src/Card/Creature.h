@@ -2,90 +2,34 @@
 #ifndef CREATURE_H
 #define CREATURE_H
 #include "Card.h"
-#include "Card.h"
-#include "Card.h"
+
 
 #include <string>
+
+std::string CREATURE = "Creature";
 
 /**
   * class Creature
   * 
   */
 
-class Creature : virtual public Card, virtual public Card, virtual public Card
+class Creature : virtual public Card
 {
 public:
 
-		// Constructors/Destructors
-		//  
 
-
-		/**
-		 * Empty Constructor
-		 */
 		Creature ();
 
-		/**
-		 * Empty Destructor
-		 */
 		virtual ~Creature ();
 
-		// Static Public attributes
-		//  
-
-		// Public attributes
-		//  
 
 
-		// Public attribute accessor methods
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-
-		/**
-		 */
-		void effect ()
-		{
-		}
-
-
-		/**
-		 * @return std::string
-		 */
 		std::string toString ()
 		{
 		}
 
-protected:
-
-		// Static Protected attributes
-		//  
-
-		// Protected attributes
-		//  
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
 
 protected:
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-
-private:
 
 		// Static Private attributes
 		//  
@@ -93,11 +37,12 @@ private:
 		static std::string type;
 		// Private attributes
 		//  
-
+		std::string race;
 		int strength;
 		int health;
 		int AttackFlag;
 		int BlockFlag;
+
 public:
 
 

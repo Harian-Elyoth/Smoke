@@ -60,15 +60,14 @@ public:
 
 		bool operator==(const Card& c);
 
-private:
+protected:
 
 		int cost;
 		std::string name;
 		int owner;
 		std::string tribe;
 		std::string type;
-		// vector<Buff*> buffs;
-
+		int invinsibleFlag;
 		void initAttributes () ;
 
 };

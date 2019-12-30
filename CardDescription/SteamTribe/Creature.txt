@@ -41,7 +41,7 @@ Cost 3 :
     
     Steam Boiler :
         Stat : 3/4
-        Effect : When the Steam Boiler enter into the battlefield with a creature card effect, draw a card. If it's a creature summon it on your battlefield,
+        Effect : When the Steam Boiler enter into the battlefield, draw a card. If it's a creature summon it on your battlefield,
         else discard it.
 
 Cost 4 :

@@ -45,6 +45,8 @@ public:
 
 		void setSmoke (int new_var){smoke = new_var;}
 
+		void looseSmoke(int new_var){smoke -= new_var;}
+		void gainSmoke(int new_var){smoke += new_var;}
 		int getSmoke (){return smoke;}
 
 		void setHand (CardList new_var){hand = new_var;}
@@ -87,6 +89,8 @@ public:
 
 		Card draw();
 
+		Card drawByName(std::string name);
+
 		Card drawCost(int cost);
 
 		Card discard();
@@ -97,13 +101,25 @@ public:
 
 		Card exile(Card& card, CardList& zone);
 
+		Card summonCostOrLess(CardList source, int cost);
+
+		Card summon(CardList source, Card card);
+
 		// Card activate(Card c);
 
 		friend std::ostream& operator<<(std::ostream& os, Player& P);
 
 		void operator=(Player& P);
 
-private:
+		void attackBoostUp(int boost){attackBoost += boost;}
+
+		void attackBoostDown(int boost){attackBoost -= boost;}
+
+		void healthBoostUp(int boost) { healthBoost += boost; }
+
+		void healthBoostDown(int boost) { healthBoost -= boost; }
+
+	private:
 
 		static int id;
 		std::string name;
@@ -116,6 +132,8 @@ private:
 		bool normalSummon;
 		bool fullBoard;
 		bool win;
+		int attackBoost;
+		int healthBoost;
 
 		void initAttributes ();
 
