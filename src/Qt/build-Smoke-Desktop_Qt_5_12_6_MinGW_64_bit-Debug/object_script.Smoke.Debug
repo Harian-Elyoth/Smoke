@@ -1,0 +1,12 @@
+debug/Board.o
+debug/Card.o
+debug/CardList.o
+debug/Game.o
+debug/Player.o
+debug/Smoke.o
+debug/CardWidget.o
+debug/DeckWidget.o
+debug/smokewindow.o
+debug/moc_CardWidget.o
+debug/moc_DeckWidget.o
+debug/moc_smokewindow.o

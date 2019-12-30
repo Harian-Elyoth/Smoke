@@ -14,8 +14,6 @@ class SmokeWindow : public QMainWindow
 public:
     SmokeWindow(QWidget *parent = nullptr);
     ~SmokeWindow();
-
-private:
     Ui::SmokeWindow *ui;
 };
 #endif // SMOKEWINDOW_H

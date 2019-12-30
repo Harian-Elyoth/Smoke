@@ -1,0 +1,12 @@
+release/Board.o
+release/Card.o
+release/CardList.o
+release/Game.o
+release/Player.o
+release/Smoke.o
+release/CardWidget.o
+release/DeckWidget.o
+release/smokewindow.o
+release/moc_CardWidget.o
+release/moc_DeckWidget.o
+release/moc_smokewindow.o

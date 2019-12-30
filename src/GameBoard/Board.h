@@ -62,6 +62,10 @@ public:
 
 		void timerReset ();
 
+        Player* getPlayer(int id);
+
+        Player* getOpponent(int id);
+
 		friend std::ostream& operator<<(std::ostream& os, Board& b);
 
 		void operator=(Board& board);

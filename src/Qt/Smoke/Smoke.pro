@@ -22,6 +22,8 @@ SOURCES += \
     ../../GameBoard/Game.cpp \
     ../../GameBoard/Player.cpp \
     ../../GameBoard/Smoke.cpp \
+    CardWidget.cpp \
+    DeckWidget.cpp \
     smokewindow.cpp
 
 HEADERS += \
@@ -31,6 +33,8 @@ HEADERS += \
     ../../GameBoard/Game.h \
     ../../GameBoard/Player.h \
     ../../GameBoard/Smoke.h \
+    CardWidget.h \
+    DeckWidget.h \
     smokewindow.h
 
 FORMS += \

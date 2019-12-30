@@ -6,17 +6,90 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>900</width>
+    <height>540</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>SmokeWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
-  <widget class="QStatusBar" name="statusbar"/>
+  <property name="locale">
+   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>900</width>
+    <height>540</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>901</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="horizontalSpacing">
+      <number>161</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>20</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="SmokeP2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QListWidget" name="boardP1"/>
+     </item>
+     <item row="0" column="2">
+      <widget class="DeckWidget" name="deckP2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QListWidget" name="handP2"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QListWidget" name="handP1"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="DeckWidget" name="deckP1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QListWidget" name="boardP2"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="SmokeP1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DeckWidget</class>
+   <extends>QLabel</extends>
+   <header>DeckWidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
