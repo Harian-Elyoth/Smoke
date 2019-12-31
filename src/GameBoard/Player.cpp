@@ -73,6 +73,46 @@ Card Player::draw(){
     return cardDrawn;
 }
 
+Card Player::drawByName(std::string name){
+    Card cardDrawn;
+    if(deck.isEmpty()) return cardDrawn;
+    std::vector<Card>::iterator it = deck.begin();
+    while((!((*it).getName().compare(name))) && it < deck.end()) it++;
+    if(it != deck.end()){
+        cardDrawn = *it;
+        deck.erase(it);
+        hand.add(cardDrawn);
+    }
+    return cardDrawn;
+}
+
+Card Player::summonCostOrLess(CardList& source, int cost){
+    Card cardDrawn;
+    if (source.isEmpty())
+        return cardDrawn;
+    std::vector<Card>::iterator it = source.begin();
+    while ((*it).getCost() != cost && it < source.end())
+        it++;
+    if (it != source.end())
+    {
+        cardDrawn = *it;
+        source.erase(it);
+        battleground.add(cardDrawn);
+    }
+    return cardDrawn;
+}
+
+Card Player::summon(CardList source, Card card){
+    battleground.add(card);
+    std::vector<Card>::iterator it = source.begin();
+    while ((!((*it).getName().compare(card.getName()))) && it < source.end())
+        it++;
+    if (it != source.end())
+    {
+        source.erase(it);
+    }
+}
+
 Card Player::drawCost(int cost){
     Card cardDrawn;
     if(deck.isEmpty()) return cardDrawn;
@@ -94,6 +134,7 @@ Card Player::discard(){
     graveyard.add(cardDiscarded);
     return cardDiscarded;
 }
+
 
 Card Player::burn(){
     Card cardBurned;

@@ -19,109 +19,129 @@ class Player
 {
 public:
 
-		//////////////////////////////////
-		//  Constructors et Destructor  //
-		//////////////////////////////////
+        //////////////////////////////////
+        //  Constructors et Destructor  //
+        //////////////////////////////////
 
-		Player ();
+        Player ();
 
-		Player(std::string n, CardList &d, std::string h);
+        Player(std::string n, CardList &d, std::string h);
 
-		Player(std::string n, std::string h);
+        Player(std::string n, std::string h);
 
-		virtual ~Player ();
+        virtual ~Player ();
 
-		////////////////////////////
-		//  Setters and guetters  //
-		////////////////////////////
+        ////////////////////////////
+        //  Setters and guetters  //
+        ////////////////////////////
 
-		void setId(int new_var){id = new_var;}
+        void setId(int new_var){id = new_var;}
 
-		int getId(){return id;}
+        int getId(){return id;}
 
-		void setName (std::string new_var){name = new_var;}
+        void setName (std::string new_var){name = new_var;}
 
-		std::string getName () const{return name;}
+        std::string getName () const{return name;}
 
-		void setSmoke (int new_var){smoke = new_var;}
+        void setSmoke (int new_var){smoke = new_var;}
 
-		int getSmoke (){return smoke;}
+        void looseSmoke(int new_var){smoke -= new_var;}
 
-		void setHand (CardList new_var){hand = new_var;}
+        void gainSmoke(int new_var){smoke += new_var;}
 
-		CardList* getHand (){return &hand;}
+        int getSmoke (){return smoke;}
 
-		void setGraveyard (CardList new_var){graveyard = new_var;}
+        void setHand (CardList new_var){hand = new_var;}
 
-		CardList* getGraveyard (){return &graveyard;}
+        CardList* getHand (){return &hand;}
 
-		void setDeck (CardList new_var){deck = new_var;}
+        void setGraveyard (CardList new_var){graveyard = new_var;}
 
-		CardList* getDeck () {return &deck;}
+        CardList* getGraveyard (){return &graveyard;}
 
-		void setBattleground (CardList new_var){battleground = new_var;}
+        void setDeck (CardList new_var){deck = new_var;}
 
-		CardList* getBattleground (){return &battleground;}
+        CardList* getDeck () {return &deck;}
 
-		void setHero (std::string new_var){hero = new_var;}
-		
-		std::string getHero (){return hero;}
-		
-		void setNormalSummon (bool new_var)	{normalSummon = new_var;}
-		
-		bool getNormalSummon ()	{return normalSummon;}
-		
-		void setFullBoard (bool new_var) {fullBoard = new_var;}
-		
-		bool getFullBoard () {return fullBoard;}
+        void setBattleground (CardList new_var){battleground = new_var;}
 
-		///////////////////////
-		//  Other fonctions  //
-		///////////////////////
+        CardList* getBattleground (){return &battleground;}
 
-		bool winConditionVerif();
+        void setHero (std::string new_var){hero = new_var;}
 
-		bool looseConditionVerif();
+        std::string getHero (){return hero;}
 
-		Card play(Card& card);
+        void setNormalSummon (bool new_var)	{normalSummon = new_var;}
 
-		Card draw();
+        bool getNormalSummon ()	{return normalSummon;}
 
-		Card drawCost(int cost);
+        void setFullBoard (bool new_var) {fullBoard = new_var;}
 
-		Card discard();
+        bool getFullBoard () {return fullBoard;}
 
-		Card burn();
+        ///////////////////////
+        //  Other fonctions  //
+        ///////////////////////
 
-		Card destroy(Card& card);
+        bool winConditionVerif();
 
-		Card exile(Card& card, CardList& zone);
+        bool looseConditionVerif();
 
-		// Card activate(Card c);
+        Card play(Card& card);
 
-		friend std::ostream& operator<<(std::ostream& os, Player& P);
+        Card draw();
 
-		void operator=(Player& P);
+        Card drawByName(std::string name);
 
-private:
+        Card drawCost(int cost);
 
-		static int id;
-		std::string name;
-		int smoke;
-		CardList hand;
-		CardList graveyard;
-		CardList deck;
-		CardList battleground;
-		std::string hero;
-		bool normalSummon;
-		bool fullBoard;
-		bool win;
+        Card discard();
 
-		void initAttributes ();
+        Card burn();
 
-		bool cardExists(CardList& cL, Card& card);
+        Card destroy(Card& card);
 
-		std::vector<Card>::iterator cardToIterator(CardList& cL, Card& card);
+        Card exile(Card& card, CardList& zone);
+
+        Card summonCostOrLess(CardList& source, int cost);
+
+        Card summon(CardList source, Card card);
+
+        // Card activate(Card c);
+
+        friend std::ostream& operator<<(std::ostream& os, Player& P);
+
+        void operator=(Player& P);
+
+        void attackBoostUp(int boost){attackBoost += boost;}
+
+        void attackBoostDown(int boost){attackBoost -= boost;}
+
+        void healthBoostUp(int boost) { healthBoost += boost; }
+
+        void healthBoostDown(int boost) { healthBoost -= boost; }
+
+    private:
+
+        static int id;
+        std::string name;
+        int smoke;
+        CardList hand;
+        CardList graveyard;
+        CardList deck;
+        CardList battleground;
+        std::string hero;
+        bool normalSummon;
+        bool fullBoard;
+        bool win;
+        int attackBoost;
+        int healthBoost;
+
+        void initAttributes ();
+
+        bool cardExists(CardList& cL, Card& card);
+
+        std::vector<Card>::iterator cardToIterator(CardList& cL, Card& card);
 
 };
 

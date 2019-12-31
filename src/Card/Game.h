@@ -2,7 +2,7 @@
 #define GAME_H
 #pragma once
 
-#include "Board.h"
+#include "../../GameBoard/Board.h"
 
 #define MAX_TURNS 100
 

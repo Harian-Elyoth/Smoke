@@ -16,9 +16,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../../GameBoard/Battlecry.cpp \
     ../../GameBoard/Board.cpp \
     ../../GameBoard/Card.cpp \
     ../../GameBoard/CardList.cpp \
+    ../../GameBoard/Creature.cpp \
+    ../../GameBoard/Deathrattle.cpp \
+    ../../GameBoard/Field.cpp \
     ../../GameBoard/Game.cpp \
     ../../GameBoard/Player.cpp \
     ../../GameBoard/Smoke.cpp \
@@ -27,12 +31,19 @@ SOURCES += \
     smokewindow.cpp
 
 HEADERS += \
+    ../../GameBoard/Battlecry.h \
     ../../GameBoard/Board.h \
     ../../GameBoard/Card.h \
     ../../GameBoard/CardList.h \
+    ../../GameBoard/Creature.h \
+    ../../GameBoard/Deathrattle.h \
+    ../../GameBoard/Field.h \
     ../../GameBoard/Game.h \
+    ../../GameBoard/GameWindow.h \
     ../../GameBoard/Player.h \
     ../../GameBoard/Smoke.h \
+    ../../GameBoard/SteamCat.h \
+    ../../GameBoard/SteamCreature.h \
     CardWidget.h \
     DeckWidget.h \
     smokewindow.h

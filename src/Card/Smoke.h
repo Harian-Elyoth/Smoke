@@ -1,5 +1,5 @@
 
-#ifndef SMOKE_H
+/*#ifndef SMOKE_H
 #define SMOKE_H
 #pragma once
 
@@ -15,4 +15,4 @@
 #include "smokewindow.h"
 #include <QApplication>
 
-#endif // SMOKE_H
+#endif // SMOKE_H*/

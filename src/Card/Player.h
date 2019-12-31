@@ -3,7 +3,7 @@
 #define PLAYER_H
 #pragma once
 
-#include "CardList.h"
+#include "../../GameBoard/CardList.h"
 #include "Card.h"
 
 #include <string>
@@ -46,7 +46,9 @@ public:
 		void setSmoke (int new_var){smoke = new_var;}
 
 		void looseSmoke(int new_var){smoke -= new_var;}
+
 		void gainSmoke(int new_var){smoke += new_var;}
+
 		int getSmoke (){return smoke;}
 
 		void setHand (CardList new_var){hand = new_var;}
@@ -101,7 +103,7 @@ public:
 
 		Card exile(Card& card, CardList& zone);
 
-		Card summonCostOrLess(CardList source, int cost);
+        Card summonCostOrLess(CardList& source, int cost);
 
 		Card summon(CardList source, Card card);
 

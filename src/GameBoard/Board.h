@@ -12,80 +12,91 @@ class Board
 {
 public:
 
-		friend class Card;
-		friend class Player;
-		friend class CardList;
-		
-		//////////////////////////////////
-		//  Constructors et Destructor  //
-		//////////////////////////////////
+        friend class Card;
+        friend class Player;
+        friend class CardList;
 
-		Board ();
+        //////////////////////////////////
+        //  Constructors et Destructor  //
+        //////////////////////////////////
 
-		virtual ~Board ();
+        Board ();
 
-		////////////////////////////
-		//  Setters and guetters  //
-		////////////////////////////
+        virtual ~Board ();
 
-		void setP1 (Player& new_var) {P1 = new_var;}
+        ////////////////////////////
+        //  Setters and guetters  //
+        ////////////////////////////
 
-		Player* getP1 ()	{return &P1;}
+        void setP1 (Player& new_var) {P1 = new_var;}
 
-		void setP2 (Player& new_var)	{P2 = new_var;}
+        Player* getP1 ()	{return &P1;}
 
-		Player* getP2 ()	{return &P2;}
+        Player* getPlayerById(int id){
+            if(P1.getId() == id) return &P1;
+            return &P2;
+        }
 
-		Player* getActivePlayer(){return activeP;}
+        void setP2 (Player& new_var)	{P2 = new_var;}
 
-		void setTimeTurn (time_t new_var) {timeTurn = new_var;}
+        Player* getP2 ()	{return &P2;}
 
-		time_t getTimeTurn () {return timeTurn;}
+        Player* getActivePlayer(){return activeP;}
 
-		void setTurn (int new_var)	{turn = new_var;}
+        void setTimeTurn (time_t new_var) {timeTurn = new_var;}
 
-		int getTurn () {return turn;}
+        time_t getTimeTurn () {return timeTurn;}
 
-		///////////////////////
-		//  Other fonctions  //
-		///////////////////////
+        void setTurn (int new_var)	{turn = new_var;}
 
-		bool verifGameEnd();
+        int getTurn () {return turn;}
 
-		void BeginPhase();
+        ///////////////////////
+        //  Other fonctions  //
+        ///////////////////////
 
-		void MainPhase(){}
+        bool verifGameEnd();
 
-		void CombatPhase(){}
+        void BeginPhase();
 
-		void EndPhase();
+        void MainPhase(){}
 
-		void options (){}
+        void CombatPhase(){}
 
-		void passTurn ();
+        void EndPhase();
 
-		void timerReset ();
+        void options (){}
 
-        Player* getPlayer(int id);
+        void passTurn ();
 
-        Player* getOpponent(int id);
+        void timerReset ();
 
-		friend std::ostream& operator<<(std::ostream& os, Board& b);
+        friend std::ostream& operator<<(std::ostream& os, Board& b);
 
-		void operator=(Board& board);
+        void operator=(Board& board);
+
+        Card* getField(){
+            return &field;
+        }
+
+        void setField(Card *new_var){
+            field = *new_var;
+        }
 
 private:
 
-		Player P1;
-		Player P2;
-		Player* activeP;
-		time_t timeTurn;
-		time_t timeStartTurn;
-		int turn;
+        Player P1 = (*new Player());
+        Player P2 = (*new Player());
+        Player* activeP;
+        time_t timeTurn;
+        time_t timeStartTurn;
+        int turn;
+        Card field;
 
-		void resetTurnTimer (){}
-		void nextTurn (){}
-		void initAttributes ();
+        void resetTurnTimer (){}
+        void nextTurn (){}
+        void initAttributes ();
+
 
 };
 

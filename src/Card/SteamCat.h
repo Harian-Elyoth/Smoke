@@ -2,14 +2,15 @@
 #include "Creature.h"
 #include "Battlecry.h"
 #include "Deathrattle.h"
+
 class SteamCat : public Creature, public Deathrattle, public Battlecry
 {
 
-    void BattlecryEffect(Board gBoard)
+    void battlecryEffect(Board gBoard)
     {   
-        gBoard.getPlayerById(owner)->draw();
+        gBoard.getPlayerById(this->owner)->draw();
     }
-    void DeathrattleEffect(Board gBoard)
+    void deathrattleEffect(Board gBoard)
     {
         Player * p = gBoard.getPlayerById(owner);
         p->summonCostOrLess(*(p->getDeck()), 2);

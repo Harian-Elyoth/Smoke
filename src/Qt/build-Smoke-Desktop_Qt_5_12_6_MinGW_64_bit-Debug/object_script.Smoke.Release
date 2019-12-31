@@ -1,6 +1,10 @@
+release/Battlecry.o
 release/Board.o
 release/Card.o
 release/CardList.o
+release/Creature.o
+release/Deathrattle.o
+release/Field.o
 release/Game.o
 release/Player.o
 release/Smoke.o

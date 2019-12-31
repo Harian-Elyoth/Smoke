@@ -1,37 +1,16 @@
 #include "Smoke.h"
+#include <chrono>
+#include <thread>
 
-#define WIDTH 900
-#define HEIGHT 540
-
-// QSize WINDOW_SIZE(WIDTH, HEIGHT);
-
-void initMainWindow(SmokeWindow* w){
-
-    //////////////////////////
-    //  Setting Background  //
-    //////////////////////////
-
-    w->setFixedSize(WIDTH, HEIGHT);
-
-    QPixmap background("../../../ressources/test.jpg");
-    background.scaled((*w).size(), Qt::IgnoreAspectRatio);
-    QPalette palette;
-    palette.setBrush(QPalette::Background, background);
-    (*w).setPalette(palette);
-
-    w->show();
-    return;
-}
-
-void addCard(SmokeWindow* w, QWidget* hand, CardWidget& card){
+void addCard(SmokeWindow* w, QHBoxLayout* hand, CardWidget* card){
     QPixmap cardBack("../../../ressources/cardback.jpg");
     QIcon cardBackIcon(cardBack);
     QSize cardSize(cardBack.size().width()*((w->size().height()*0.2)/cardBack.size().height()), w->size().height()*0.2);
-    card.setIcon(cardBackIcon);
-    card.setMaximumSize(cardSize);
-    card.setMinimumSize(cardSize);
-    card.setIconSize(cardSize);
-    hand->layout()->addWidget(&card);
+    card->setIcon(cardBackIcon);
+    card->setMaximumSize(cardSize);
+    card->setMinimumSize(cardSize);
+    card->setIconSize(cardSize);
+    hand->addWidget(card);
     return;
 }
 
@@ -54,9 +33,21 @@ int main(int argc, char *argv[]){
 
     QApplication a(argc, argv);
     SmokeWindow* w = new SmokeWindow();
-    initMainWindow(w);
+    w->show();
+
+    //Testing adding card
+
     CardWidget* card = new CardWidget(w);
-    ((QListWidget*)w->ui.handP2)->;
+    CardWidget* card2 = new CardWidget(w);
+
+    CardList* deckTest = new CardList();
+    SteamCat sC;
+    deckTest->add(sC);
+    w->getDP2()->setDeck(deckTest);
+
+    card->setCard(new SteamCat());
+    addCard(w, (QHBoxLayout*) w->getHP1(), card);
+    addCard(w, (QHBoxLayout*) w->getHP2(), card2);
 
     return a.exec();
 }

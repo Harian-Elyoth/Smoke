@@ -4,11 +4,11 @@ DeckWidget::DeckWidget(QWidget* parent){
     this->setParent(parent);
 }
 
-void DeckWidget::setPlayer(CardList* cL){
+void DeckWidget::setDeck(CardList* cL){
     this->cL = cL;
     return;
 }
 
-int DeckWidget::DeckSize(){
-    return cL->size();
+QString DeckWidget::DeckSize(){
+    return QString::fromStdString(std::to_string(cL->size()));
 }

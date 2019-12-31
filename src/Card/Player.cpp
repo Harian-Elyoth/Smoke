@@ -86,7 +86,7 @@ Card Player::drawByName(std::string name){
     return cardDrawn;
 }
 
-Card Player::summonCostOrLess(CardList source, int cost){
+Card Player::summonCostOrLess(CardList& source, int cost){
     Card cardDrawn;
     if (source.isEmpty())
         return cardDrawn;

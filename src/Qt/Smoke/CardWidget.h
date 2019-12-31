@@ -2,10 +2,11 @@
 #define CARDWIDGET_H
 
 #include <QPushButton>
+#include <QMessageBox>
 #include "../../GameBoard/Card.h"
 
-class CardWidget : public QPushButton{
-
+class CardWidget : public QPushButton
+{
     Q_OBJECT
 
 public:
@@ -13,8 +14,26 @@ public:
     CardWidget(QIcon icon, QWidget *parent = nullptr);
     ~CardWidget();
 
+    void setCard(Card* c){
+        this->owner = c->getOwner();
+        this->card = c;
+    }
+
+    Card* Card(){return card;}
+
+    int getOwner(){return owner;}
+
 private:
-    Card card;
+    class Card* card;
+    int owner;
+
+public slots:
+    void clicked(){
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("You clicked");
+        msgBox.setText("You clicked");
+        msgBox.exec();
+    }
 
 };
 

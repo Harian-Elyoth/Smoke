@@ -34,16 +34,6 @@ void Board::timerReset(){
     return;
 }
 
-Player* Board::getPlayer(int id){
-    if(id == P1.getId()) return &P1;
-    else return &P2;
-}
-
-Player* Board::getOpponent(int id){
-    if(id == P1.getId()) return &P2;
-    else return &P1;
-}
-
 std::ostream& operator<<(std::ostream& os, Board& b){
     os << *(b.getP1()) << *(b.getP2()) << std::endl;
     return os;

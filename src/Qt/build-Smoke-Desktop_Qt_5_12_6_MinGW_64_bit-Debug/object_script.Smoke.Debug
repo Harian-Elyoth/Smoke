@@ -1,6 +1,10 @@
+debug/Battlecry.o
 debug/Board.o
 debug/Card.o
 debug/CardList.o
+debug/Creature.o
+debug/Deathrattle.o
+debug/Field.o
 debug/Game.o
 debug/Player.o
 debug/Smoke.o

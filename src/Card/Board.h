@@ -3,7 +3,7 @@
 #define BOARD_H
 #pragma once
 
-#include "Player.h"
+#include "../../GameBoard/Player.h"
 
 #include <string>
 #include <time.h>

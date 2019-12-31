@@ -29,6 +29,10 @@ public:
 
 		std::vector<Card> &getCList (){return cList;}
 
+        void setMaxSize (int mS){maxSize = mS;}
+
+        int getMaxSize (){return maxSize;}
+
 		///////////////////////
 		//  Other fonctions  //
 		///////////////////////
@@ -47,6 +51,8 @@ public:
 
 		bool isEmpty();
 
+        bool isFull();
+
 		size_t size();
 
 		void show ();
@@ -58,6 +64,8 @@ public:
 private:
 
 		std::vector<Card> cList;
+
+        int maxSize;
 
 		void initAttributes ();
 

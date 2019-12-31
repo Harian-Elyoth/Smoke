@@ -37,6 +37,11 @@ bool CardList::isEmpty(){
     return cList.empty();
 }
 
+bool CardList::isFull(){
+    if(cList.size() < maxSize) return false;
+    else return true;
+}
+
 size_t CardList::size(){
     return cList.size();
 }
@@ -58,5 +63,6 @@ void CardList::operator=(CardList& cL){
 
 void CardList::initAttributes(){
     cList.clear();
+    maxSize = 5;
     return;
 }

@@ -12,6 +12,8 @@
 #include <QDesktopWidget>
 #include <QFormLayout>
 #include <QListWidget>
+#include <QGridLayout>
+#include <QMessageBox>
 
 #include "Card.h"
 #include "CardList.h"
@@ -20,17 +22,11 @@
 #include "Game.h"
 #include "smokewindow.h"
 
+#include "SteamCat.h"
+
 #include "CardWidget.h"
 #include "DeckWidget.h"
 
-void initMainWindow(SmokeWindow* w);
-
 void addCard(SmokeWindow* w, QWidget* hand, CardWidget* card);
-
-void playerHand(SmokeWindow* w, QWidget* handP1, QWidget* handP2);
-
-void initChooseClanWindow(Player* P);
-
-void initChooseDeck(Player *P);
 
 #endif // SMOKE_H
