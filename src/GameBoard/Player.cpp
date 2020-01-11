@@ -34,6 +34,19 @@ bool Player::looseConditionVerif(){
     return false;
 }
 
+void Player::checkBattlegroundState(){
+    std::vector<Card>::iterator it = battleground.begin();
+    if(it == battleground.end()) return;
+    while(it != battleground.end()){
+        Creature& card = dynamic_cast<Creature&>(*it);
+        if(card.getHealth() <= 0){
+            battleground.erase(it);
+            graveyard.add(*it);
+        }
+        it++;
+    }
+}
+
 bool Player::cardExists(CardList& cL, Card& card){
     std::vector<Card>::iterator it = cL.begin();
     if(it == cL.end()) return false;
@@ -52,16 +65,6 @@ std::vector<Card>::iterator Player::cardToIterator(CardList& cL, Card& card){
         if(it == cL.end()) return it;
     }
     return it;
-}
-
-Card Player::play(Card& card){
-    Card cardPlayed;
-    if(!cardExists(hand, card)) return cardPlayed;
-    cardPlayed = card;
-    hand.erase(cardToIterator(hand, card));
-    smoke -= card.getCost();
-    battleground.add(cardPlayed);
-    return cardPlayed;
 }
 
 Card Player::draw(){

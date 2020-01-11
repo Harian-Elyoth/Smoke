@@ -7,26 +7,24 @@
 #include <string>
 #include <vector>
 
-#include <QApplication>
+/*#include <QApplication>
 #include <QPushButton>
 #include <QDesktopWidget>
 #include <QFormLayout>
 #include <QListWidget>
 #include <QGridLayout>
-#include <QMessageBox>
+#include <QMessageBox>*/
 
 #include "Card.h"
 #include "CardList.h"
 #include "Player.h"
 #include "Board.h"
 #include "Game.h"
-#include "smokewindow.h"
+// #include "smokewindow.h"
 
-#include "SteamCat.h"
+/*#include "CardWidget.h"
+#include "DeckWidget.h"*/
 
-#include "CardWidget.h"
-#include "DeckWidget.h"
-
-void addCard(SmokeWindow* w, QWidget* hand, CardWidget* card);
+// void addCard(SmokeWindow* w, QWidget* hand, CardWidget* card);
 
 #endif // SMOKE_H

@@ -29,6 +29,7 @@ public:
     QHBoxLayout* getBP1(){return boardP1;}
     DeckWidget* getDP2(){return DP2;}
     DeckWidget* getDP1(){return DP1;}
+    Board* getBoard(){return &board;}
     Ui::SmokeWindow *ui;
 
 private:
@@ -50,28 +51,6 @@ private:
     Board board;
 
 public slots:
-    void playCard(CardWidget* card){
-        int id = card->getOwner();
-        QListWidget* hand;
-        QListWidget* battleground;
-        int i = 0;
-
-        if(id == board.getP1()->getId()){
-            hand = HP1;
-            battleground = BP1;
-        }
-        else{
-            hand = HP2;
-            battleground = BP1;
-        }
-
-        if(board.getActivePlayer()->getId() != id || board.getActivePlayer()->getBattleground()->isFull()) return;
-
-        while(card != (CardWidget*)hand->layout()->itemAt(i)->widget() && i < hand->layout()->count()) i++;
-        hand->layout()->takeAt(i);
-        battleground->layout()->addWidget(card);
-        board.getActivePlayer()->play(*card->Card());
-    }
 
 };
 #endif // SMOKEWINDOW_H

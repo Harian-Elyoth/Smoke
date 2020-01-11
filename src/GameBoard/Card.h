@@ -18,6 +18,8 @@ public:
 
 		Card ();
 
+		Card(const Card &c);
+
 		Card(int c, std::string n, int id, std::string tr, std::string ty);
 
 		virtual ~Card ();

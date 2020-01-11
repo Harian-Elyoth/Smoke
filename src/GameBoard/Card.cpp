@@ -4,6 +4,9 @@ Card::Card () {
     initAttributes();
 }
 
+Card::Card(const Card &c):
+cost(c.cost),name(c.name),owner(c.owner),tribe(c.tribe),type(c.type){ }
+
 Card::Card (int c, std::string n, int id, std::string tr, std::string ty):
 cost(c), name(n), owner(id), tribe(tr), type(ty){}
 

@@ -4,6 +4,7 @@
 #pragma once
 
 #include "CardList.h"
+#include "Creature.h"
 #include "Card.h"
 
 #include <string>
@@ -87,7 +88,7 @@ public:
 
         bool looseConditionVerif();
 
-        Card play(Card& card);
+        void checkBattlegroundState();
 
         Card draw();
 

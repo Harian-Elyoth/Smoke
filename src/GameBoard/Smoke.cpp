@@ -1,8 +1,6 @@
 #include "Smoke.h"
-#include <chrono>
-#include <thread>
 
-void addCard(SmokeWindow* w, QHBoxLayout* hand, CardWidget* card){
+/*void addCard(SmokeWindow* w, QHBoxLayout* hand, CardWidget* card){
     QPixmap cardBack("../../../ressources/cardback.jpg");
     QIcon cardBackIcon(cardBack);
     QSize cardSize(cardBack.size().width()*((w->size().height()*0.2)/cardBack.size().height()), w->size().height()*0.2);
@@ -12,26 +10,42 @@ void addCard(SmokeWindow* w, QHBoxLayout* hand, CardWidget* card){
     card->setIconSize(cardSize);
     hand->addWidget(card);
     return;
-}
+}*/
 
 int main(int argc, char *argv[]){
-    /*gameStart();
+    gameStart();
+
 	Board board;
+
 	Player P1((std::string)"Axel", (std::string)"Alucard");
 	Player P2((std::string)"Elyoth", (std::string)"Rasputin");
-	Card c1(5, (std::string)"Barbarius", P1.getId(), (std::string)"Cloud", (std::string)"Berserker");
-	Card c2(2, (std::string)"Gloutonous Cat", P1.getId(), (std::string)"Toxic", (std::string)"Chat");
-	Card c3(7, (std::string)"Astolfo", P1.getId(), (std::string)"Dust", (std::string)"Mage");
-	board.setP1(P1);
+	
+    Card* allCards = new Card[3];
+    for(int i = 0; i < 3; i++){
+        allCards[i] = SteamCat();
+        allCards[i].setOwner(P1.getId());
+    }
+
+    board.setP1(P1);
 	board.setP2(P2);
-	board.getP1()->getDeck()->add(c1);
-	board.getP1()->getDeck()->add(c2);
-	board.getP1()->getDeck()->add(c3);
-    board.getP2()->getDeck()->add(c3);
+	board.getP1()->getDeck()->add(allCards[0]);
+	board.getP1()->getDeck()->add(allCards[1]);
+	board.getP1()->getDeck()->add(allCards[2]);
+    board.getP2()->getDeck()->add(allCards[0]);
+	board.getP2()->getDeck()->add(allCards[1]);
+	board.getP2()->getDeck()->add(allCards[2]);
 
-    std::cout << board << std::endl;*/
+    board.getP1()->draw();
 
-    QApplication a(argc, argv);
+    std::cout << board << std::endl;
+
+    board.play(allCards[0]);
+
+    std::cout << board << std::endl;
+
+    delete[] allCards;
+
+    /*QApplication a(argc, argv);
     SmokeWindow* w = new SmokeWindow();
     w->show();
 
@@ -49,6 +63,6 @@ int main(int argc, char *argv[]){
     addCard(w, (QHBoxLayout*) w->getHP1(), card);
     addCard(w, (QHBoxLayout*) w->getHP2(), card2);
 
-    return a.exec();
+    return a.exec();*/
 }
 

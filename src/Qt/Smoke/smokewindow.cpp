@@ -1,5 +1,6 @@
 #include "smokewindow.h"
 #include "ui_smokewindow.h"
+#include <QLabel>
 
 #define WIDTH 900
 #define HEIGHT 540

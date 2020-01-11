@@ -7,6 +7,10 @@
 
 #include <string>
 #include <time.h>
+#include <typeinfo>
+#include <iostream>
+
+#include "SteamCat.h"
 
 class Board
 {
@@ -65,6 +69,8 @@ public:
 
         void EndPhase();
 
+        void CheckBattlegroundsState();
+
         void options (){}
 
         void passTurn ();
@@ -83,10 +89,16 @@ public:
             field = *new_var;
         }
 
+        bool cardExists(CardList& cL, Card& card);
+
+        std::vector<Card>::iterator cardToIterator(CardList& cL, Card& card);
+
+        Card play(Card& card);
+
 private:
 
-        Player P1 = (*new Player());
-        Player P2 = (*new Player());
+        Player P1;
+        Player P2;
         Player* activeP;
         time_t timeTurn;
         time_t timeStartTurn;
@@ -99,5 +111,11 @@ private:
 
 
 };
+
+/////////////////////
+///  Battlecries  ///
+/////////////////////
+
+void battlecrySteamCat(Board* gBoard, Card* card);
 
 #endif // BOARD_H

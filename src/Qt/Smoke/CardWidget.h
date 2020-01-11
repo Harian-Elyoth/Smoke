@@ -3,6 +3,8 @@
 
 #include <QPushButton>
 #include <QMessageBox>
+#include <QListWidget>
+#include "smokewindow.h"
 #include "../../GameBoard/Card.h"
 
 class CardWidget : public QPushButton
@@ -28,12 +30,14 @@ private:
     int owner;
 
 public slots:
-    void clicked(){
+    void cardClicked(){
         QMessageBox msgBox;
         msgBox.setWindowTitle("You clicked");
         msgBox.setText("You clicked");
         msgBox.exec();
     }
+
+    void playCard();
 
 };
 
