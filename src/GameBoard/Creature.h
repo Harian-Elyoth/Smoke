@@ -1,11 +1,14 @@
 #ifndef CREATURE_H
 #define CREATURE_H
+#pragma once
 
 #include "Card.h"
 
 #include <string>
 
-class Creature : virtual public Card
+#define CREATURE  "Creature"
+
+class Creature : public Card
 {
 public:
 
@@ -35,9 +38,12 @@ public:
 
         int getBlockFlag () {return BlockFlag;}
 
+        friend std::ostream& operator<<(std::ostream& os, const Creature& c);
+
+        void init(){std::cout << "CREATURE" << std::endl;}
+
 protected:
 
-        // static std::string type;
 		std::string race;
 		int strength;
 		int health;
@@ -46,7 +52,7 @@ protected:
 
 private:
 
-		void initAttributes () ;
+		void initAttributes ();
 
 };
 

@@ -15,10 +15,6 @@
 #include <QGridLayout>
 #include <QMessageBox>*/
 
-#include "Card.h"
-#include "CardList.h"
-#include "Player.h"
-#include "Board.h"
 #include "Game.h"
 // #include "smokewindow.h"
 

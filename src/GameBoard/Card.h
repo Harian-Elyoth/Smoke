@@ -6,6 +6,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <iostream>
 
 class Card
 {
@@ -62,6 +63,8 @@ public:
 
 		bool operator==(const Card& c);
 
+		void init(){std::cout << "CARD" << std::endl;}
+
 protected:
 
 		int cost;
@@ -70,7 +73,7 @@ protected:
         std::string tribe;
 		std::string type;
 		int invinsibleFlag;
-		void initAttributes () ;
+		void initAttributes ();
 
 };
 

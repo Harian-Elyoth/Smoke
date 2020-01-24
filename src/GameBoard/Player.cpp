@@ -24,27 +24,46 @@ name(n), hero(h) {
 Player::~Player () {}
 
 bool Player::winConditionVerif(){
-    if(smoke >= SMOKE_WIN_CONDITION) return true;
+    if(smoke >= SMOKE_WIN_CONDITION){
+        std::cout << name << " has " << smoke <<  " smoke." << std::endl;
+        return true;
+    }
     return false;
 }
 
 bool Player::looseConditionVerif(){
-    if(smoke <= SMOKE_LOOSE_CONDITION) return true;
-    if(deck.size() <= 0) return true;
+    if(smoke <= SMOKE_LOOSE_CONDITION){
+        std::cout << name << " has " << smoke <<  " smoke." << std::endl;
+        return true;
+    }
+    if(deck.size() <= 0){
+        std::cout << name << " has " << deck.size() <<  " cards in his deck." << std::endl;
+        return true;
+    }
     return false;
 }
 
 void Player::checkBattlegroundState(){
     std::vector<Card>::iterator it = battleground.begin();
     if(it == battleground.end()) return;
+    Creature crea;
     while(it != battleground.end()){
-        Creature& card = dynamic_cast<Creature&>(*it);
-        if(card.getHealth() <= 0){
-            battleground.erase(it);
-            graveyard.add(*it);
-        }
-        it++;
+        crea = static_cast<Creature&>(*it);
+        std::cout << crea << std::endl;
+        /*if(crea){
+            if(crea->getHealth() <= 0){
+                battleground.erase(it);
+            }
+        }*/
+    it++;
     }
+    return;
+}
+
+void Player::move(CardList* source, CardList* destination, std::vector<Card>::iterator it){
+    source->erase(it);
+    destination->add(it);
+    return;
 }
 
 bool Player::cardExists(CardList& cL, Card& card){
@@ -73,6 +92,7 @@ Card Player::draw(){
     cardDrawn = deck.front();
     deck.erase(deck.begin());
     hand.add(cardDrawn);
+    std::cout << "I draw!!!"<< std::endl;
     return cardDrawn;
 }
 
@@ -86,6 +106,7 @@ Card Player::drawByName(std::string name){
         deck.erase(it);
         hand.add(cardDrawn);
     }
+    std::cout << "I draw, " << name << "!!!" << std::endl;
     return cardDrawn;
 }
 
@@ -102,18 +123,18 @@ Card Player::summonCostOrLess(CardList& source, int cost){
         source.erase(it);
         battleground.add(cardDrawn);
     }
+    std::cout << "I summon, " << cardDrawn.getName() << "!!!" << std::endl;
     return cardDrawn;
 }
 
-Card Player::summon(CardList source, Card card){
-    battleground.add(card);
-    std::vector<Card>::iterator it = source.begin();
-    while ((!((*it).getName().compare(card.getName()))) && it < source.end())
-        it++;
-    if (it != source.end())
-    {
-        source.erase(it);
-    }
+Card Player::summon(CardList* source, Card& card){
+    Card cardPlayed;
+    if(!cardExists(*source, card) || smoke < card.getCost()) return cardPlayed;
+    cardPlayed = card;
+    source->erase(cardToIterator(*source, card));
+    battleground.add(cardPlayed);
+    std::cout << "I summon, " << cardPlayed.getName() << "!!!" << std::endl;
+    return cardPlayed;
 }
 
 Card Player::drawCost(int cost){
@@ -126,6 +147,7 @@ Card Player::drawCost(int cost){
         deck.erase(it);
         hand.add(cardDrawn);
     }
+    std::cout << "I draw!!!" << std::endl;
     return cardDrawn;
 }
 
@@ -135,9 +157,19 @@ Card Player::discard(){
     cardDiscarded = hand.front();
     hand.erase(hand.begin());
     graveyard.add(cardDiscarded);
+    std::cout << "I discard, " << cardDiscarded.getName() << "!!!" << std::endl;
     return cardDiscarded;
 }
 
+Card Player::discardCard(Card& card){
+    Card cardDiscarded;
+    if(!cardExists(hand, card)) return cardDiscarded;
+    cardDiscarded = card;
+    hand.erase(cardToIterator(hand, card));
+    graveyard.add(cardDiscarded);
+    std::cout << "I discard, " << cardDiscarded.getName() << "!!!" << std::endl;
+    return cardDiscarded;
+}
 
 Card Player::burn(){
     Card cardBurned;
@@ -145,6 +177,7 @@ Card Player::burn(){
     cardBurned = deck.front();
     deck.erase(deck.begin());
     graveyard.add(cardBurned);
+    std::cout << "I burn, " << cardBurned.getName() << "!!!" << std::endl;
     return cardBurned;
 }
 
@@ -154,6 +187,7 @@ Card Player::destroy(Card& card){
     cardDestroyed = card;
     battleground.erase(cardToIterator(battleground, card));
     graveyard.add(cardDestroyed);
+    std::cout << "I destroy, " << cardDestroyed.getName() << "!!!" << std::endl;
     return cardDestroyed;
 }
 
@@ -162,11 +196,12 @@ Card Player::exile(Card& card, CardList& zone){
     if(!cardExists(zone, card)) return cardExiled;
     cardExiled = card;
     zone.erase(cardToIterator(zone, card));
+    std::cout << "I exile, " << cardExiled.getName() << "!!!" << std::endl;
     return cardExiled;
 }
 
 std::ostream& operator<<(std::ostream& os, Player& P){
-    os << "-----------------------" << std::endl << "Player : " << P.getHero() << " alias " << P.getName() << std::endl << "Hand :" << std::endl << (*P.getHand()) << std::endl << "Deck :" << std::endl << (*P.getDeck()) << std::endl << "Graveyard :" << std::endl << (*P.getGraveyard()) << std::endl << "Battleground :" << std::endl << (*P.getBattleground()) << std::endl << "-----------------------" << std::endl;
+    os << "-----------------------" << std::endl << "Player : " << P.getHero() << " alias " << P.getName() << " / Smoke :" << P.getSmoke() << std::endl << "Hand :" << std::endl << (*P.getHand()) << std::endl << "Deck :" << std::endl << (*P.getDeck()) << std::endl << "Graveyard :" << std::endl << (*P.getGraveyard()) << std::endl << "Battleground :" << std::endl << (*P.getBattleground()) << std::endl << "-----------------------" << std::endl;
     return os;
 }
 

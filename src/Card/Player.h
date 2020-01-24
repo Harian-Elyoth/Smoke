@@ -97,6 +97,8 @@ public:
 
 		Card discard();
 
+		Card discardCard(Card& card);
+
 		Card burn();
 
 		Card destroy(Card& card);

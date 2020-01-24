@@ -135,6 +135,15 @@ Card Player::discard(){
     return cardDiscarded;
 }
 
+Card Player::discardCard(Card& card){
+    Card cardDiscarded;
+    if(!cardExists(hand, card)) return cardDiscarded;
+    cardDiscarded = card;
+    hand.erase(cardToIterator(hand, card));
+    graveyard.add(cardDiscarded);
+    return cardDiscarded;
+}
+
 
 Card Player::burn(){
     Card cardBurned;

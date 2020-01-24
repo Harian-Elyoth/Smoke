@@ -1,3 +1,3 @@
 #include <string>
 
-std::string STEAMCORE = "Steam Core";
+#define STEAMCORE "Steam Core"

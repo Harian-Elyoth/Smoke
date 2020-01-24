@@ -8,9 +8,14 @@
 #include <string>
 #include <time.h>
 #include <typeinfo>
-#include <iostream>
+#include <vector>
 
+#include "SteamCreature.h"
 #include "SteamCat.h"
+#include "SteamBoiler.h"
+#include "SteamGear.h"
+
+#define MAX_CARDS 3
 
 class Board
 {
@@ -55,6 +60,10 @@ public:
 
         int getTurn () {return turn;}
 
+        void setAllCards(CardList list){allCards = list;}
+
+        CardList* getAllCards(){return &allCards;}
+
         ///////////////////////
         //  Other fonctions  //
         ///////////////////////
@@ -63,9 +72,9 @@ public:
 
         void BeginPhase();
 
-        void MainPhase(){}
+        void MainPhase();
 
-        void CombatPhase(){}
+        void CombatPhase();
 
         void EndPhase();
 
@@ -105,6 +114,8 @@ private:
         int turn;
         Card field;
 
+        CardList allCards;
+
         void resetTurnTimer (){}
         void nextTurn (){}
         void initAttributes ();
@@ -117,5 +128,9 @@ private:
 /////////////////////
 
 void battlecrySteamCat(Board* gBoard, Card* card);
+
+void battlecrySteamBoiler(Board* gBoard, Card* card);
+
+void battlecrySteamGear(Board* gBoard, Card *card);
 
 #endif // BOARD_H

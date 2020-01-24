@@ -38,24 +38,41 @@ Card Board::play(Card& card){
     P->getBattleground()->add(cardPlayed);
     std::string className = cardPlayed.getName();
 
-    std::cout << "I play, " << className << "!!!" << std::endl << std::endl;
+    std::cout << "I play, " << className << "!!!" << std::endl;
     
     if(className.compare("SteamCat") == 0){
         battlecrySteamCat(this, &card);
+    }
+    else if(className.compare("SteamBoiler") == 0){
+        battlecrySteamBoiler(this, &card);
+    }
+    else if(className.compare("SteamGear") == 0){
+        battlecrySteamGear(this, &card);
     }
 
     return cardPlayed;
 }
 
 bool Board::verifGameEnd(){
-    return (P1.winConditionVerif() | P1.looseConditionVerif() | P2.winConditionVerif() | P2.looseConditionVerif());
+    return (P1.winConditionVerif() || P1.looseConditionVerif() || P2.winConditionVerif() || P2.looseConditionVerif());
 }
 
 void Board::BeginPhase(){
+    std::cout << "Start of the Begin Phase" << std::endl;
     (*activeP).setNormalSummon(true);
     (*activeP).draw();
     (*activeP).setSmoke((*activeP).getSmoke() + SMOKE_GAIN_ON_TURN);
     return;
+}
+
+void Board::MainPhase(){
+    std::cout << "Start of the Main Phase" << std::endl;
+    play((*P1.getHand())[0]);
+    return;
+}
+
+void Board::CombatPhase(){
+
 }
 
 void Board::EndPhase(){
@@ -81,7 +98,7 @@ void Board::timerReset(){
 }
 
 std::ostream& operator<<(std::ostream& os, Board& b){
-    os << *(b.getP1()) << *(b.getP2()) << std::endl;
+    os << *(b.getP1()) << *(b.getP2());
     return os;
 }
 
@@ -110,6 +127,26 @@ void Board::initAttributes () {
 void battlecrySteamCat(Board* gBoard, Card* card){
     gBoard->getPlayerById(card->getOwner())->draw();
 }
+
+void battlecrySteamBoiler(Board* gBoard, Card* card){
+    Player * p = gBoard->getPlayerById(card->getOwner());
+    Card cardDrawn;
+    cardDrawn = p->draw();
+    if(cardDrawn.getType() == CREATURE){
+        p->summon(p->getHand(), cardDrawn);
+    }
+    else {
+        p->discardCard(cardDrawn);
+    }
+}
+
+void battlecrySteamGear(Board* gBoard, Card *card)
+    {
+        gBoard->getPlayerById(card->getOwner())->gainSmoke(2);
+        if(!(STEAMCORE == gBoard->getField()->getName())){
+            gBoard->getPlayerById(card->getOwner())->gainSmoke(3);
+        }
+    }
 
 //////////////////////
 ///  Deathrattles  ///

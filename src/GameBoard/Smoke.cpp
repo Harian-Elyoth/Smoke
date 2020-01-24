@@ -15,36 +15,6 @@
 int main(int argc, char *argv[]){
     gameStart();
 
-	Board board;
-
-	Player P1((std::string)"Axel", (std::string)"Alucard");
-	Player P2((std::string)"Elyoth", (std::string)"Rasputin");
-	
-    Card* allCards = new Card[3];
-    for(int i = 0; i < 3; i++){
-        allCards[i] = SteamCat();
-        allCards[i].setOwner(P1.getId());
-    }
-
-    board.setP1(P1);
-	board.setP2(P2);
-	board.getP1()->getDeck()->add(allCards[0]);
-	board.getP1()->getDeck()->add(allCards[1]);
-	board.getP1()->getDeck()->add(allCards[2]);
-    board.getP2()->getDeck()->add(allCards[0]);
-	board.getP2()->getDeck()->add(allCards[1]);
-	board.getP2()->getDeck()->add(allCards[2]);
-
-    board.getP1()->draw();
-
-    std::cout << board << std::endl;
-
-    board.play(allCards[0]);
-
-    std::cout << board << std::endl;
-
-    delete[] allCards;
-
     /*QApplication a(argc, argv);
     SmokeWindow* w = new SmokeWindow();
     w->show();

@@ -10,6 +10,6 @@ Board gameInit();
 
 void gameStart();
 
-void gameEnd();
+void gameEnd(Board& board);
 
 #endif

@@ -37,6 +37,8 @@ public:
 		//  Other fonctions  //
 		///////////////////////
 
+		void add(std::vector<Card>::iterator it);
+
 		void add (Card& card);
 
 		void add (std::vector<Card> &cL);
@@ -60,6 +62,8 @@ public:
 		friend std::ostream& operator<<(std::ostream& os, CardList& cL);
 
 		void operator=(CardList& cL);
+
+		Card& operator[](int index);
 
 private:
 

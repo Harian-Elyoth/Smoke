@@ -8,6 +8,8 @@
 #include "Card.h"
 
 #include <string>
+#include <iostream>
+#include <typeinfo>
 
 #define SMOKE_WIN_CONDITION 250
 #define SMOKE_LOOSE_CONDITION 0
@@ -90,6 +92,8 @@ public:
 
         void checkBattlegroundState();
 
+        void move(CardList* source, CardList* destination, std::vector<Card>::iterator it);
+
         Card draw();
 
         Card drawByName(std::string name);
@@ -97,6 +101,8 @@ public:
         Card drawCost(int cost);
 
         Card discard();
+
+        Card discardCard(Card& card);
 
         Card burn();
 
@@ -106,7 +112,7 @@ public:
 
         Card summonCostOrLess(CardList& source, int cost);
 
-        Card summon(CardList source, Card card);
+        Card summon(CardList* source, Card& card);
 
         // Card activate(Card c);
 

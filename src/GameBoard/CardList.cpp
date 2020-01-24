@@ -6,6 +6,10 @@ CardList::CardList(){
 
 CardList::~CardList () { }
 
+void CardList::add(std::vector<Card>::iterator it){
+    if(&(*it)) cList.push_back(*it);
+}
+
 void CardList::add(Card& card){
     cList.push_back(card);
     return;
@@ -59,6 +63,16 @@ std::ostream& operator<<(std::ostream& os, CardList& d){
 void CardList::operator=(CardList& cL){
     this->cList = cL.cList;
     return;
+}
+
+Card& CardList::operator[](int index){
+    int i = 0;
+    for(std::vector<Card>::iterator it = cList.begin(); it != cList.end(); it++){
+        if(i == index) return *it;
+        i++;
+    }
+    Card card;
+    return card;
 }
 
 void CardList::initAttributes(){
