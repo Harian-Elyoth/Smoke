@@ -7,7 +7,11 @@
 #include <string>
 #include <vector>
 
-class Card
+#include "Battlecry.h"
+#include "Deathrattle.h"
+#include "Trigger.h"
+
+class Card : public Battlecry, public Deathrattle, public Trigger
 {
 public:
 
@@ -15,7 +19,9 @@ public:
 		//  Constructors et Destructor  //
 		//////////////////////////////////
 		
-
+		virtual void deathrattleEffect(Board gBoard) = 0;
+		virtual void triggerEffect(Board gBoard) = 0;
+		virtual void deathrattleEffect(Board gBoard) = 0;
 		Card ();
 
 		Card(int c, std::string n, int id, std::string tr, std::string ty);
@@ -67,6 +73,7 @@ protected:
 		int owner;
 		std::string tribe;
 		std::string type;
+		// vector<Buff*> buffs;
 		int invinsibleFlag;
 		void initAttributes () ;
 

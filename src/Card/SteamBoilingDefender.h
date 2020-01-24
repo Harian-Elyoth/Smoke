@@ -6,7 +6,7 @@
 #include "SteamCreature.h"
 #include "Board.h"
 
-class SteamBoilingDefender : public Creature, public Trigger
+class SteamBoilingDefender : public Creature
 {
 
     void TriggerEffect(Board gBoard)

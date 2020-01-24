@@ -47,8 +47,7 @@ Cost 3 :
 Cost 4 :
 
     Steam Fed Cat :
-        Stat : 2/2
-        Effect : When the Steam Fed Cat enter into the battlefield, discard one card. If it's a creature summon it from your battlefield.
+        Stat : 2/6
 
     Steam Trainor :
         Stat 3/4 :

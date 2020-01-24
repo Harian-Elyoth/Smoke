@@ -1,10 +1,9 @@
 #ifndef STEAMWORKER
 #define STEAMWORKER
 #include "Creature.h"
-#include "Battlecry.h"
 #include "SteamCreature.h"
 
-class SteamWorker : public Creature, public Battlecry
+class SteamWorker : public Creature
 {
 
     void BattlecryEffect(Board gBoard)

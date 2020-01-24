@@ -5,7 +5,7 @@
 #include "Deathrattle.h"
 #include "SteamCreature.h"
 
-class SteamWorker : public Creature, public Battlecry, public Deathrattle
+class SteamWorker : public Creature
 {
 
     void battleCryEffect(Board gBoard){

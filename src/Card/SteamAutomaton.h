@@ -3,14 +3,11 @@
 #include "Battlecry.h"
 #include "SteamCreature.h"
 
-class SteamAutomaton : public Creature, public Battlecry {
+class SteamAutomaton : public Creature {
 
     public :
 
-        void BattleCryEffect(Board gBoard){
-            //MECANIQUE DE JEU A RAJOUTER
-        }
-    
+
         void initAttributes(){
             cost = 1;
             type = "Creature";
@@ -18,7 +15,7 @@ class SteamAutomaton : public Creature, public Battlecry {
             AttackFlag = 0;
             BlockFlag = 0;
             strength = 1;
-            health = 2;
+            health = 3;
         }
 };
 #endif // !STEAMAUTOMATON

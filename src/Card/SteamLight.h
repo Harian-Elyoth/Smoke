@@ -1,11 +1,10 @@
 #ifndef STEAMLIGHT_H
 #define STEAMLIGHT_H
 #include "Creature.h"
-#include "Deathrattle.h"
 #include "Board.h"
 #include "SteamCreature.h"
 
-class SteamLight : public Creature, public Deathrattle {
+class SteamLight : public Creature {
 
     public:
 

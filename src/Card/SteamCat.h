@@ -1,8 +1,6 @@
 #ifndef STEAMCAT
 #include "Creature.h"
-#include "Battlecry.h"
-#include "Deathrattle.h"
-class SteamCat : public Creature, public Deathrattle, public Battlecry
+class SteamCat : public Creature
 {
 
     void BattlecryEffect(Board gBoard)

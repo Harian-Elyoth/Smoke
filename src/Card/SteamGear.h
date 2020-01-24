@@ -2,12 +2,11 @@
 #ifndef STEAMGEAR_H
 #define STEAMGEAR_H
 #include "Creature.h"
-#include "Battlecry.h"
 #include "Board.h"
 #include "SteamCreature.h"
 #include <string.h>
 
-class SteamGear : public Creature, public Battlecry
+class SteamGear : public Creature
 {
 
     void battlecryEffect(Board gBoard)

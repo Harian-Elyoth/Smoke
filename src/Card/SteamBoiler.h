@@ -4,7 +4,7 @@
 #include "Creature.h"
 #include "Battlecry.h"
 
-class SteamBoiler : public Creature, public Battlecry {
+class SteamBoiler : public Creature {
 
     public :
 

@@ -27,7 +27,7 @@ public:
 
 		void setCList (std::vector<Card> &new_var){cList = new_var;}
 
-		std::vector<Card> &getCList (){return cList;}
+		std::vector<Card> &getCList(){return cList;}
 
 		///////////////////////
 		//  Other fonctions  //
@@ -55,10 +55,10 @@ public:
 
 		void operator=(CardList& cL);
 
-private:
+public:
 
 		std::vector<Card> cList;
-
+private :
 		void initAttributes ();
 
 };
